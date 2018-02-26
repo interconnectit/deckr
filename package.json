@@ -2,6 +2,8 @@
     "private": true,
     "devDependencies": {
         "lerna": "2.9.0",
-        "lerna-changelog": "0.7.0"
+        "lerna-changelog": "0.7.0",
+        "stylelint": "9.1.1",
+        "stylelint-config-standard": "18.1.0"
     }
 }
