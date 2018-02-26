@@ -1,0 +1,20 @@
+{
+    "name": "deckr-reboot",
+    "version": "0.0.0",
+    "description": "Reboot the browsers default styles",
+    "sass": "main.scss",
+    "main": "main.js",
+    "scripts": {
+        "test": ""
+    },
+    "repository": "https://github.com/interconnectit/deckr/tree/master/components/deckr-reboot",
+    "bugs": {
+        "url": "https://github.com/interconnectit/deckr/issues"
+    },
+    "keywords": [
+        "deckr",
+        "reboot"
+    ],
+    "author": "interconnect/it",
+    "license": "MIT"
+}
