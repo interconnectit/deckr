@@ -43,7 +43,7 @@ You can import individual Deckr components, for instance:
 ## Testing
 
 ``` sh
-$ npm test
+$ npm run lint
 ```
 
 ## Security

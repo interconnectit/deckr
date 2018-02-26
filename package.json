@@ -1,5 +1,9 @@
 {
     "private": true,
+    "scripts": {
+        "postinstall": "lerna bootstrap --hoist",
+        "lint": "lerna run lint"
+    },
     "devDependencies": {
         "lerna": "2.9.0",
         "lerna-changelog": "0.7.0",
