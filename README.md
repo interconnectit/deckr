@@ -53,7 +53,7 @@ If you discover any security related issues, please email support@interconectit.
 ## Credits
 
 - [interconnect/it](https://interconnectit.com)
-- [All Contributors](../../contributors)
+- [All Contributors](https://github.com/interconnectit/deckr/graphs/contributors)
 
 ## License
 
