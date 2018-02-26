@@ -2,7 +2,7 @@
     "private": true,
     "scripts": {
         "postinstall": "lerna bootstrap --hoist",
-        "test": "lerna run test"
+        "test": "stylelint components/**/*.scss"
     },
     "devDependencies": {
         "lerna": "2.9.0",
