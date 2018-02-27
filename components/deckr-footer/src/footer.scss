@@ -1,0 +1,16 @@
+.sf-footer {
+    padding: 40px 0;
+    background: #fff;
+
+    &__container {
+        @include container;
+    }
+
+    &__widgets {
+        margin: -15px -15px 0;
+
+        @include desktop {
+            display: flex;
+        }
+    }
+}
