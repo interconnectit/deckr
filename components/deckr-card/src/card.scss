@@ -1,0 +1,442 @@
+/**
+ * The card component
+ *
+ * This is a commonly used component for showing collections of content.
+ * Although there are many variations of it, the basic elements are:
+ * - .sf-card__header      HEADER CONTAINER
+ * --- .sf-card__image       Image
+ * --- .sf-category          Category
+ * - .sf-card__text        TEXT CONTAINER
+ * --- .sf-card__title       Title
+ * --- .sf-card__excerpt     Excerpt
+ * - .sf-card__meta        META CONTAINER
+ * --- .sf-author            Author
+ * --- .sf-date              Date
+ */
+
+// Individual cards
+.sf-card {
+
+    background-color: $card-background-color;
+
+    margin-bottom: 24px;
+    position: relative;
+    flex: 100%;
+
+    @include tablet {
+        margin-bottom: 30px;
+    }
+    @include desktop {
+        margin-right: $card-gap;
+        margin-bottom: 30px;
+    }
+
+    // 2 x card styling
+    .sf-cards--2 & {
+        @include desktop {
+            flex: 630 / 1320 * 100%;
+        }
+
+    }
+
+    // 3 x card styling
+    .sf-cards--3 & {
+        @include desktop {
+            flex: 410 / 1320 * 100%;
+        }
+
+    }
+
+    // 4 x card styling
+    .sf-cards--4 & {
+        @include desktop {
+            flex: 300 / 1320 * 100%;
+        }
+    }
+
+    // 6 x card styling - plus basis for the 5 x intro
+    .sf-cards--5 &, .sf-cards--6 & {
+        @include mobile {
+            flex: 47%;
+            margin-right: $card-gap;
+        }
+        @include desktop {
+            flex: 190 / 1290 * 100%;
+            margin-right: $card-gap;
+            &:nth-of-type(2n) {
+                margin-right: $card-gap;
+            }
+        }
+
+    }
+
+    //5 x intro
+    .sf-cards--5 & {
+        @include mobile {
+            flex: 47%;
+            margin-right: $card-gap;
+        }
+
+        @include desktop {
+            flex: 190 / 1290 * 100%;
+        }
+
+        &--intro {
+            border: none;
+            background: none;
+            flex: 100%;
+            @include desktop {
+                flex: 190 / 1290 * 100%;
+            }
+        }
+
+    }
+
+    .sf-cards--sidebar &,
+    .sf-cards--archive & {
+        @include desktop {
+            margin-right: 0;
+            flex: 100%;
+        }
+    }
+
+    &__header {
+        position: relative;
+    }
+
+    &__image {
+        height: 200px;
+        max-width: none;
+        width: 100%;
+        object-fit: cover;
+        @include desktop {
+            height: 250px;
+        }
+
+        &-link--object-fit {
+
+            background-size: cover;
+            background-position: 50% 50%;
+            display: block;
+            height: 200px;
+
+            @include desktop {
+                height: 250px;
+            }
+
+            img {
+                display: none;
+            }
+        }
+
+        .sf-cards--hero &,
+        .sf-cards--1 & {
+            @include desktop {
+                height: 400px;
+                height: 50vh;
+            }
+
+            &-link--object-fit {
+
+                @include desktop {
+                    height: 400px;
+                    height: 50vh;
+                }
+
+            }
+
+        }
+
+        .sf-cards--2 & {
+            @include desktop {
+                height: 300px;
+            }
+
+            &-link--object-fit {
+
+                @include desktop {
+                    height: 300px;
+                }
+
+            }
+        }
+
+        .sf-cards--related & {
+            @include desktop {
+                height: 200px;
+            }
+
+            &-link--object-fit {
+
+                @include desktop {
+                    height: 200px;
+                }
+
+            }
+        }
+
+        .sf-cards--4 & {
+            @include desktop {
+                height: 180px;
+            }
+
+            &-link--object-fit {
+
+                @include desktop {
+                    height: 180px;
+                }
+
+            }
+        }
+
+        .sf-cards--sidebar & {
+
+            @include desktop {
+                height: 200px;
+            }
+
+            &-link--object-fit {
+
+                @include desktop {
+                    height: 200px;
+                }
+
+            }
+
+        }
+
+
+    }
+
+    &__categories {
+        font-size: 0;
+        left: 0;
+        line-height: 1;
+        position: absolute;
+        top: 0;
+    }
+
+    .sf-category {
+        margin-right: 2px;
+        margin-bottom: 2px;
+    }
+
+    &__text {
+        padding: 24px 24px 48px 24px;
+        @include mobile {
+            padding: 30px 30px 54px 30px;
+        }
+
+        .sf-cards--hero &,
+        .sf-cards--1 & {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+            @include tablet {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+
+        .sf-cards--2 & {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+            @include tablet {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+
+        .sf-cards--3 & {
+            @include desktop {
+                padding: 24px 30px 54px 30px;
+            }
+        }
+
+        .sf-cards--4 & {
+            @include desktop {
+                padding: 21px 30px 54px 30px;
+            }
+        }
+
+        .sf-cards--5 & {
+            padding-top: 24px;
+        }
+
+        .sf-card--intro & {
+            padding: 0;
+        }
+
+    }
+
+    &__title {
+        font-weight: bold;
+        @include fsz(21px);
+        @include lh(21px);
+        margin-bottom: 3px;
+        @include desktop {
+
+        }
+
+        .sf-cards--hero &,
+        .sf-cards--1 & {
+            @include tablet {
+                @include fsz(24px);
+                @include lh(27px);
+                padding-left: 30px;
+                width: 490 / 1290 * 100%;
+            }
+        }
+
+        .sf-cards--2 & {
+            @include tablet {
+                @include fsz(18px);
+                padding-left: 30px;
+                width: 190 / 630 * 100%;
+            }
+        }
+
+        .sf-cards--4 & {
+            @include desktop {
+                @include fsz(18px);
+            }
+        }
+
+        .sf-cards--5 &, .sf-cards--6 & {
+            @include desktop {
+                @include fsz(18px);
+            }
+        }
+
+        .sf-cards--5 &, .sf-cards--6 & {
+            @include desktop {
+                @include fsz(18px);
+            }
+        }
+
+        .sf-cards--sidebar & {
+
+            @include desktop {
+                @include fsz(18px);
+                @include lh(18px);
+            }
+
+        }
+
+        &-link {
+            &:link, &:visited {
+                color: $black;
+            }
+            &:hover, &:active {
+                color: $primary-color;
+            }
+        }
+
+    }
+
+    &__excerpt {
+        @include fsz(16px);
+        @include lh(21px);
+
+        .sf-cards--hero &,
+        .sf-cards--1 & {
+            @include tablet {
+                @include fsz(18px);
+                @include lh(27px);
+                padding-right: 30px;
+                width: 740 / 1290 * 100%;
+            }
+        }
+
+        .sf-cards--2 & {
+            @include tablet {
+                padding-right: 30px;
+                width: 410 / 630 * 100%;
+            }
+        }
+
+        .sf-cards--4 & {
+            @include desktop {
+                @include fsz(14px);
+            }
+        }
+
+        .sf-cards--5 &, .sf-cards--6 & {
+            @include desktop {
+                @include fsz(14px);
+                @include lh(18px);
+            }
+        }
+
+        .sf-cards--sidebar & {
+
+            @include desktop {
+                @include fsz(14px);
+                @include lh(18px);
+            }
+
+        }
+    }
+
+    &__meta {
+        bottom: 0;
+        border-top: 1px solid $light-grey;
+        left: 0;
+        padding: 6px 24px 6px 24px;
+        position: absolute;
+        width: 100%;
+        @include mobile {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            padding: 12px 30px 12px 30px;
+        }
+        .sf-cards--5 &, .sf-cards--6 & {
+            @include desktop {
+                padding-top: 6px;
+                padding-bottom: 6px;
+            }
+        }
+    }
+
+    .sf-author {
+
+        margin-bottom: 3px;
+        width: 60%;
+
+        .sf-cards--2 &, .sf-cards--3 &, .sf-cards--4 & {
+            @include mobile {
+                margin-bottom: 0;
+                width: 60%;
+            }
+        }
+
+        .sf-cards--5 &, .sf-cards--6 & {
+            margin-bottom: 3px;
+            width: 100%;
+        }
+
+    }
+
+    .sf-date {
+
+        text-align: right;
+        width: 40%;
+
+        .sf-cards--2 &, .sf-cards--3 &, .sf-cards--4 & {
+            @include mobile {
+                text-align: right;
+                width: 40%;
+            }
+
+        }
+
+        .sf-cards--5 &, .sf-cards--6 & {
+            width: 100%;
+        }
+
+    }
+}
