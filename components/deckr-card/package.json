@@ -12,6 +12,6 @@
         "deckr",
         "card"
     ],
-    "card": "interconnect/it",
+    "author": "interconnect/it",
     "license": "MIT"
 }

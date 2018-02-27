@@ -12,6 +12,6 @@
         "deckr",
         "cta"
     ],
-    "cta": "interconnect/it",
+    "author": "interconnect/it",
     "license": "MIT"
 }

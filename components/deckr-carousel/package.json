@@ -12,6 +12,6 @@
         "deckr",
         "carousel"
     ],
-    "carousel": "interconnect/it",
+    "author": "interconnect/it",
     "license": "MIT"
 }

@@ -12,6 +12,6 @@
         "deckr",
         "featured"
     ],
-    "featured": "interconnect/it",
+    "author": "interconnect/it",
     "license": "MIT"
 }
