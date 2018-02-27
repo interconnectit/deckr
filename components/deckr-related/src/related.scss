@@ -1,0 +1,7 @@
+.sf-related {
+    clear: both;
+    @include desktop {
+        margin-top: 60px;
+        width: 87%;
+    }
+}

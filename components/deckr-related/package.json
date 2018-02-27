@@ -1,0 +1,17 @@
+{
+    "name": "deckr-related",
+    "version": "0.0.0",
+    "description": "Logo search component description",
+    "sass": "main.scss",
+    "main": "main.js",
+    "repository": "https://github.com/interconnectit/deckr/tree/master/components/deckr-related",
+    "bugs": {
+        "url": "https://github.com/interconnectit/deckr/issues"
+    },
+    "keywords": [
+        "deckr",
+        "related"
+    ],
+    "author": "interconnect/it",
+    "license": "MIT"
+}
