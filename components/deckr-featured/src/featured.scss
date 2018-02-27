@@ -1,0 +1,79 @@
+/**
+ * The featured posts component
+ *
+ * This is a component for showing featured content.
+ * Although there are many variations of it, the basic elements are:
+ * - .sf-featured__header      HEADER CONTAINER
+ * --- .sf-featured__image       Image
+ * - .sf-featured__text        TEXT CONTAINER
+ * --- .sf-featured__title       Title
+ * --- .sf-featured__content     content
+ */
+
+// Featured Post widget
+.sf-featured {
+
+    background-color: $card-background-color;
+
+    margin-bottom: 24px;
+    position: relative;
+    flex: 100%;
+
+    @include tablet {
+        margin-bottom: 30px;
+    }
+    @include desktop {
+        margin-bottom: 30px;
+    }
+
+    &__header {
+
+    }
+
+    &__image {
+        max-width: none;
+        width: 100%;
+        object-fit: cover;
+
+        @include desktop {
+            height: 400px;
+            height: 50vh;
+        }
+    }
+
+    &__text {
+        padding: 24px 24px 48px 24px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+
+        @include mobile {
+            padding: 30px 30px 54px 30px;
+        }
+
+        @include tablet {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    &__title {
+        @include fsz(24px);
+        @include lh(27px);
+        font-weight: bold;
+        padding-left: 30px;
+        margin-bottom: 10px;
+        width: 490 / 1290 * 100%;
+
+        @include desktop {
+
+        }
+    }
+
+    &__content {
+        @include fsz(16px);
+        @include lh(21px);
+        padding-left: 30px;
+    }
+
+}
