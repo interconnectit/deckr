@@ -30,12 +30,6 @@ The source files included are written in [Scss](http://sass-lang.com/). After [i
 @import "deckr-reboot/main.scss";
 ```
 
-## Testing
-
-``` sh
-$ npm run lint
-```
-
 ## Security
 
 If you discover any security related issues, please email support@interconectit.com instead of using the issue tracker.
