@@ -1,6 +1,7 @@
 import React from 'react'
 import {setOptions} from '@storybook/addon-options'
 import {addDecorator, configure} from '@storybook/react'
+import '../components/deckr/main.scss'
 
 setOptions({
     name: 'Deckr',
