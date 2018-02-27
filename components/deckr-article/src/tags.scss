@@ -1,0 +1,71 @@
+.sf-article-tags {
+    clear: both;
+    margin-bottom: 24px;
+    padding: 12px 24px;
+    background: #fff;
+
+    @include tablet {
+        margin-bottom: 30px;
+        width: 87%;
+    }
+
+    @include widescreen {
+        width: 665 / 880 * 100%;
+        margin-left: 110 / 960 * 100%;
+    }
+
+    &__title {
+        @include fsz(14px);
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+
+        @include tablet {
+            margin: 2px 0 0;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        @include desktop {
+            @include fsz(18px);
+            margin: 1px 9px 0 0;
+        }
+    }
+
+    &__list {
+        font-size: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    &__item {
+        margin: 0 3px 3px 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__link {
+        @include fsz(10px);
+        font-weight: 700;
+        padding: 3px;
+        display: block;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #fff;
+        background: $primary-color;
+        transition: box-shadow 0.5s ease-in-out;
+
+        @include desktop {
+            @include fsz(12px);
+            padding: 3px 6px;
+        }
+
+        &:hover {
+            box-shadow: 0 2px 0 darken($primary-color, 8%);
+            color: $black;
+        }
+    }
+}
