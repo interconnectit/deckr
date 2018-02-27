@@ -15,8 +15,4 @@ addDecorator(story => (
 
 const stories = require.context('../components', true, /stories.*\.js$/)
 
-function loadStories() {
-    stories.keys().forEach(story => stories(story))
-}
-
-configure(loadStories, module)
+configure(() => stories.keys().forEach(stories), module)
