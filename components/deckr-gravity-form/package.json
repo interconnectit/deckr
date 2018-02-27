@@ -1,0 +1,17 @@
+{
+    "name": "deckr-gravity-form",
+    "version": "0.0.0",
+    "description": "Footer component description",
+    "sass": "main.scss",
+    "main": "main.js",
+    "repository": "https://github.com/interconnectit/deckr/tree/master/components/deckr-gravity-form",
+    "bugs": {
+        "url": "https://github.com/interconnectit/deckr/issues"
+    },
+    "keywords": [
+        "deckr",
+        "gravity-form"
+    ],
+    "author": "interconnect/it",
+    "license": "MIT"
+}
