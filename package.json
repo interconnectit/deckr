@@ -4,7 +4,7 @@
         "postinstall": "lerna bootstrap --hoist",
         "storybook:start": "start-storybook -p 9001",
         "storybook:build": "build-storybook -o build",
-        "lint": "stylelint --formatter verbose 'components/**/*.scss'"
+        "test": "stylelint --formatter verbose 'components/**/*.scss'"
     },
     "devDependencies": {
         "@storybook/addon-options": "3.3.14",
