@@ -1,6 +1,6 @@
 # The MIT License (MIT)
 
-Copyright (c) 2017 Evgenii Nasyrov <inasyrov@ya.ru>
+Copyright (c) 2018 interconnect/it <support@interconnectit.com>
 
 > Permission is hereby granted, free of charge, to any person obtaining a copy
 > of this software and associated documentation files (the "Software"), to deal
