@@ -25,7 +25,7 @@ $ npm install --save deckr
 The source files included are written in [Scss](http://sass-lang.com/). After [installing](#install) with npm, you can add your project's `node_modules` directory to your Sass [include paths](https://github.com/sass/node-sass#includepaths), then import it like this:
 
 ``` scss
-@import "deckr/main.scss";
+@import "deckr/main";
 ```
 
 ## Security
