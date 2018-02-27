@@ -1,6 +1,6 @@
 {
     "name": "deckr",
-    "version": "0.0.1-1",
+    "version": "0.0.1-2",
     "description": "",
     "sass": "main.scss",
     "main": "main.js",
@@ -14,6 +14,6 @@
     "author": "interconnect/it",
     "license": "MIT",
     "devDependencies": {
-        "deckr-reboot": "0.0.1-1"
+        "deckr-reboot": "^0.0.1-2"
     }
 }

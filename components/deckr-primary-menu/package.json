@@ -1,6 +1,6 @@
 {
     "name": "deckr-primary-menu",
-    "version": "0.0.0",
+    "version": "0.0.1-0",
     "description": "Primary menu search component description",
     "sass": "main.scss",
     "main": "main.js",
