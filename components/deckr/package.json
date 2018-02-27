@@ -12,5 +12,8 @@
         "deckr"
     ],
     "author": "interconnect/it",
-    "license": "MIT"
+    "license": "MIT",
+    "devDependencies": {
+        "deckr-reboot": "0.0.1-1"
+    }
 }
