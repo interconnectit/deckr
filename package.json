@@ -2,11 +2,18 @@
     "private": true,
     "scripts": {
         "postinstall": "lerna bootstrap --hoist",
-        "test": "stylelint --formatter verbose 'components/**/*.scss'"
+        "storybook:start": "start-storybook -p 9001",
+        "storybook:build": "build-storybook -o build",
+        "lint": "stylelint --formatter verbose 'components/**/*.scss'"
     },
     "devDependencies": {
+        "@storybook/addon-options": "3.3.14",
+        "@storybook/react": "3.3.14",
+        "babel-core": "6.26.0",
         "lerna": "2.9.0",
         "lerna-changelog": "0.7.0",
+        "react": "16.2.0",
+        "react-dom": "16.2.0",
         "stylelint": "9.1.1",
         "stylelint-config-standard": "18.1.0"
     }
