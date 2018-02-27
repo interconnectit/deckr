@@ -1,0 +1,102 @@
+.sf-primary-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    background: rgba($black, 1);
+    box-shadow: 0 4px 7px rgba($black, 0.3);
+    z-index: 5;
+
+    @include desktop {
+        top: 0;
+        right: 130px;
+        left: auto;
+        height: 78px;
+        display: block;
+        background: none;
+        box-shadow: none;
+    }
+
+    @include widescreen {
+        top: 0;
+        right: 80px;
+        left: auto;
+        height: 78px;
+        display: block;
+    }
+
+    &__list {
+        height: inherit;
+        margin: 15px 0 0;
+        padding-left: 0;
+        list-style: none;
+
+        @include desktop {
+            font-size: 0;
+            margin-top: 0;
+        }
+    }
+
+    &__item {
+        border-top: 1px solid rgba(#fff, 0.1);
+        text-align: right;
+
+        @include desktop {
+            height: inherit;
+            margin-left: 30px;
+            display: inline-block;
+            vertical-align: bottom;
+            border-top: none;
+        }
+
+        &:first-child {
+            @include desktop {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__link {
+        padding: 12px 5%;
+        display: block;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        @include fsz(14px);
+
+        @include desktop {
+            font-size: $base-font-size;
+            height: calc(100% + 3px);
+            padding: 0;
+            line-height: 500%;
+            border-bottom: 3px solid transparent;
+        }
+
+        &:hover {
+            text-decoration: none;
+            border-color: $primary-color;
+            color: $primary-color;
+        }
+
+        &--is-active {
+            color: $primary-color;
+            pointer-events: none;
+
+            @include desktop {
+                color: #fff;
+                border-color: $primary-color;
+            }
+        }
+    }
+
+    &__item:last-child &__link {
+        @include desktop {
+            padding-right: 0;
+        }
+    }
+
+    &--is-openned {
+        display: block;
+    }
+}
