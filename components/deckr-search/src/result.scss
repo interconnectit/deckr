@@ -1,0 +1,64 @@
+.sf-search-results {
+
+    @include fsz(16px);
+    @include lh(21px);
+
+    &__text {
+        @include tablet {
+            @include fsz(18px);
+            @include lh(24px);
+        }
+    }
+
+    form {
+        background-color: #fff;
+        margin-bottom: 24px;
+        padding: 24px;
+
+        @include tablet {
+            margin-bottom: 30px;
+            padding-top: 42px;
+            padding-right:110 / 960 * 100%;
+            padding-bottom: 42px;
+            padding-left: 110 / 960 * 100%;
+        }
+    }
+
+    label {
+        margin: 0;
+    }
+
+    label .screen-reader-text {
+        display: block;
+        font-family: $headings-font-family;
+        font-weight: 700;
+        margin-bottom: 6px;
+        @include tablet {
+            @include fsz(24px);
+            margin-bottom: 9px;
+        }
+    }
+
+    .search-field {
+        border: 1px solid $grey;
+        display: inline-block;
+        height: 36px;
+        line-height: 36px;
+        padding: 6px;
+        vertical-align: middle;
+        width: 170px;
+        @include mobile {
+            width: 300px;
+            max-width: 350px;
+        }
+    }
+
+    .search-submit {
+        display: inline-block;
+        height: 36px;
+        line-height: 36px;
+        vertical-align: middle;
+        @include btn;
+    }
+
+}
