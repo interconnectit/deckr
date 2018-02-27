@@ -5,7 +5,8 @@ import '../components/deckr/main.scss'
 
 setOptions({
     name: 'Deckr',
-    url: 'http://interconnectit.github.io/deckr/'
+    url: 'http://interconnectit.github.io/deckr/',
+    showDownPanel: false
 })
 
 addDecorator(story => (
