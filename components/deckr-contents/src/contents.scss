@@ -1,0 +1,145 @@
+.sf-article-content__text .sf-contents {
+
+    background: #fff;
+    border: 1px solid $light-grey;
+    margin-bottom: 24px;
+    padding: 6px 12px;
+
+
+    @include widescreen {
+        float: left;
+        margin-top: 30px;
+        margin-right: 5%;
+        margin-bottom: 30px;
+        padding: 18px 30px;
+        width: 40%;
+    }
+
+    &__title {
+        font-family: $headings-font-family;
+        margin: 0;
+    }
+
+    &__list {
+        margin: 0;
+        width: 100%;
+    }
+
+    &__item {
+
+        display: inline-block;
+        @include fsz(14px);
+        font-weight: bold;
+        @include lh(18px);
+        margin: 0;
+        margin-right: 9px;
+        @include mb(3px);
+
+        @include tablet {
+            @include fsz(16px);
+            @include lh(21px);
+        }
+
+        @include desktop {
+            display: block;
+            margin: 0;
+            @include mb(3px);
+        }
+
+        &:before {
+            display: none;
+            background: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        &_level_1,
+        &_level_2,
+        &_level_3 {
+            display: none;
+            font-weight: normal;
+
+            @include desktop {
+                display: block;
+            }
+
+
+
+            &:before {
+                content: '-';
+                display: inline;
+            }
+
+        }
+
+        &_level_1 {
+            margin-left: .5em;
+        }
+
+        &_level_2 {
+            margin-left: 1em;
+        }
+
+        &_level_3 {
+            margin-left: 1.5em;
+        }
+
+
+
+    }
+
+    &__link {
+
+        &:link, &:visited {
+            color: $primary-color;
+            text-decoration: underline;
+
+            @include desktop {
+                text-decoration: none;
+            }
+
+        }
+
+        &:hover {
+            color: darken($primary-color, 10%);
+        }
+
+    }
+
+}
+
+.sf-contents-link {
+
+    display: inline-block;
+    @include fsz(12px);
+    font-weight: bold;
+    line-height: 1;
+    padding: 6px;
+    text-transform: uppercase;
+
+    transition: box-shadow 0.5s ease-in-out;
+
+    @include tablet {
+        margin-left: 6%;
+    }
+
+    @include desktop {
+        margin-left: 0;
+    }
+
+    @include widescreen {
+        margin-left: 110 / 850 * 100%;
+    }
+
+    &:link, &:visited {
+        background-color: $primary-color;
+        color: #fff;
+    }
+
+    &:hover {
+        box-shadow: 0 4px 0 darken($primary-color, 10%);
+    }
+
+}
