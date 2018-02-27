@@ -1,0 +1,38 @@
+.sf-global-menu {
+    display: none;
+    font-size: 0;
+    height: 24px;
+    position: absolute;
+    text-align: right;
+    top: -12px;
+    width: 100%;
+
+    z-index: 99;
+
+    @include desktop {
+        display: block;
+    }
+
+
+    &__list {
+        list-style: none;
+        @include fsz(10px);
+        @include lh(24px);
+        height: 24px;
+        text-transform: uppercase;
+    }
+
+    &__item {
+        display: inline-block;
+        margin-left: 12px;
+    }
+
+    &__link {
+        &:link, &:visited {
+            color: #fff;
+        }
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
