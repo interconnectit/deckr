@@ -1,0 +1,44 @@
+.pagination {
+
+    font-size: 0;
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
+
+    @include desktop {
+        width: 87%;
+    }
+
+    h2 {
+        display: none;
+    }
+
+    .page-numbers {
+        margin-right: 6px;
+        @include btn;
+
+        &.current {
+            border-color: $black;
+            color: $black;
+            cursor: default;
+            &:hover {
+                background-color: #fff;
+            }
+        }
+
+        &.dots {
+            border: none;
+            background-color: transparent;
+            color: $black;
+
+            &:hover {
+                background-color: transparent;
+                color: $black;
+                cursor: auto;
+            }
+        }
+    }
+
+
+
+}
