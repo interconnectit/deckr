@@ -1,0 +1,51 @@
+.sf-content {
+
+    &__container {
+        @include container;
+    }
+
+    &__row {
+        @include clearfix;
+    }
+
+    &__main {
+        @include desktop {
+            width: 100%;
+            margin-right: -330px;
+            float: left;
+        }
+    }
+
+    &__main-container {
+        @include desktop {
+            margin-right: 330px;
+        }
+    }
+
+    &__sidebar {
+        @include desktop {
+            width: 300px;
+            float: right;
+        }
+    }
+
+    .home & {
+        padding-top: 80px;
+
+        @include desktop {
+            padding-top: 120px;
+        }
+    }
+
+    .single &,
+    .page &,
+    .archive &,
+    .search-results &,
+    .search-no-results & {
+        padding-top: 80px;
+
+        @include desktop {
+            padding-top: 120px;
+        }
+    }
+}
