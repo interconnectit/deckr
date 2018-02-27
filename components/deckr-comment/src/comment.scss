@@ -1,0 +1,232 @@
+.sf-comment {
+
+    list-style: none;
+    margin-top: 30px;
+    padding-bottom: 0;
+
+    &__body {
+
+        position: relative;
+        width: 800 / 860 * 100%;
+        margin-left: 60 / 860 * 100%;
+        padding-bottom: 30px;
+        background-color: #fff;
+        border-bottom: 1px solid $light-grey;
+
+        .avatar {
+            position: absolute;
+            top: 0;
+            left: - 60 / 860 * 100%;
+            width: 60 / 860 * 100%;
+            display: block;
+        }
+
+    }
+
+    &__header {
+
+        font-family: $base-font-family;
+        @include lh(21px);
+        padding: 12px 18px 0;
+
+        @include desktop {
+            @include lh(30px);
+            padding: 18px 30px 0;
+        }
+
+    }
+
+    &__author {
+        display: inline-block;
+        font-weight: bold;
+        @include fsz(16px);
+
+        @include desktop {
+            @include fsz(21px);
+        }
+    }
+
+    &__date {
+        display: inline-block;
+        font-style: italic;
+        @include fsz(14px);
+    }
+
+    &__warning {
+        color: #999;
+    }
+
+    &__text {
+
+        max-width: 40em;
+        padding-right: 18px;
+        padding-left: 18px;
+
+        @include mobile {
+            padding-right: 18px;
+            padding-left: 18px;
+        }
+
+        @include widescreen {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            @include fsz(24px);
+            @include lh(24px);
+            font-weight: 700;
+            @include mt(18px);
+            @include mb(12px);
+
+            @include mobile {
+                @include fsz(30px);
+                @include lh(30px);
+                @include mt(24px);
+                @include mb(15px);
+            }
+        }
+
+        p {
+            @include fsz(14px);
+            @include lh(18px);
+            @include mb(18px);
+
+            @include mobile {
+                @include fsz(16px);
+                @include lh(24px);
+                @include mb(24px);
+            }
+
+            @include widescreen {
+                @include fsz(18px);
+                @include lh(24px);
+                @include mb(15px);
+            }
+        }
+
+        ul, ol, dd {
+            @include mb(12px);
+            margin-left: 20px;
+            padding: 0;
+
+            @include mobile {
+                @include mb(15px);
+            }
+        }
+
+        li, dl {
+            @include fsz(14px);
+            @include lh(18px);
+            @include mb(6px);
+
+            @include mobile {
+                @include fsz(16px);
+                @include lh(24px);
+                @include mb(12px);
+            }
+
+            ul, ol, dd {
+                @include mt(6px);
+                @include mobile {
+                    @include mt(12px);
+                }
+            }
+        }
+
+        table {
+            background-color: #fff;
+            border: 1px solid $grey;
+            @include fsz(14px);
+            line-height: 1;
+            margin-bottom: 18px;
+
+            th, td {
+                border: 1px solid $grey;
+                padding: 6px;
+                vertical-align: top;
+            }
+        }
+
+    }
+
+    &__reply {
+
+        margin-left: 18px;
+
+        @include widescreen {
+            margin-left: 30px;
+        }
+
+        a {
+            @include btn;
+        }
+
+    }
+
+    &__children {
+
+        background-color: #fff;
+        border-bottom: 1px solid $light-grey;
+        margin: 0;
+        margin-left: 60 / 860 * 100%;
+        padding: 0;
+        padding-top: 18px;
+        width: 800 / 860 * 100%;
+
+        @include desktop {
+            padding-top: 30px;
+        }
+    }
+
+    &__children & {
+
+        list-style: none;
+        margin: 0;
+        padding-bottom: 0;
+
+    }
+
+    &__children &__author {
+
+        @include desktop {
+            padding-top: 0;
+        }
+
+    }
+
+    &__children &__body {
+
+        background-color: #fff;
+        border-bottom: none;
+        padding-bottom: 30px;
+        position: relative;
+        margin-top: 0;
+        padding-left: 12px;
+
+        @include desktop {
+            padding-left: 30px;
+        }
+
+    }
+
+    &__children .avatar {
+        position: absolute;
+        top: 0;
+        left: - 30 / 860 * 100%;
+        display: block;
+
+        @include desktop {
+            width: 60 / 860 * 100%;
+        }
+    }
+
+    &__children &__children {
+
+        margin-left: 90 / 860 * 100%;
+        padding-top: 0;
+        width: 770 / 860 * 100%;
+
+    }
+
+}

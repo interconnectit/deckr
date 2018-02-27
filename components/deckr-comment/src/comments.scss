@@ -1,0 +1,79 @@
+.sf-comments {
+
+    @include desktop {
+        width: 87%;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        @include fsz(24px);
+        @include lh(27px);
+
+        @include tablet {
+            @include fsz(36px);
+            @include lh(42px);
+        }
+    }
+
+    &__list {
+        margin: 0;
+        margin-bottom: 24px;
+        padding: 0;
+
+        @include desktop {
+            margin-bottom: 30px;
+        }
+
+    }
+
+    &__children {
+        padding-left: 12px;
+        margin-top: 18px;
+        @include widescreen {
+            padding-left: 30px;
+        }
+    }
+
+    &__navigation {
+        margin-bottom: 30px;
+    }
+
+    &__navigation-list {
+
+        list-style: none;
+        padding: 0;
+
+        @include mobile {
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row nowrap;
+        }
+    }
+
+    &__navigation-btn {
+        margin-right: 20px;
+        margin-bottom: 12px;
+
+        @include mobile {
+
+            margin: 0;
+        }
+
+        @include desktop {
+
+        }
+
+        a {
+            @include btn;
+
+            &:hover, &:active {
+                color: #fff;
+            }
+
+        }
+
+    }
+
+
+
+}

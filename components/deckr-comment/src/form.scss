@@ -1,0 +1,88 @@
+.sf-comments {
+
+    margin-bottom: 24px;
+
+    @include desktop {
+        margin-bottom: 60px;
+    }
+
+    .comment-form {
+        background-color: #fff;
+        padding: 24px;
+
+        @include desktop {
+            padding: 36px;
+            padding-right: 80 / 850 * 100%;
+            padding-left: 80 / 850 * 100%;
+        }
+    }
+
+    .comment-notes {
+        @include fsz(14px);
+        @include lh(18px);
+
+        @include desktop {
+            @include fsz(18px);
+            @include lh(21px);
+        }
+    }
+
+    .comment-form-comment {
+
+    }
+
+    p {
+        margin-bottom: 24px;
+
+        @include desktop {
+            margin-bottom: 30px;
+        }
+    }
+
+    label {
+        display: block;
+        @include fsz(14px);
+        @include lh(18px);
+        font-weight: 700;
+        margin-bottom: 3px;
+
+        @include desktop {
+            @include fsz(16px);
+            @include lh(18px);
+        }
+    }
+
+    .comment-form-comment {
+
+        @include desktop {
+            width: 100%;
+        }
+
+    }
+
+    textarea {
+        border: 1px solid $grey;
+        width: 100%;
+        padding: 9px 6px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"] {
+        border: 1px solid $grey;
+        color: $black;
+        font-family: $base-font-family;
+        @include fsz(14px);
+        padding: 9px 6px;
+
+        @include desktop {
+            width: 440 / 690 * 100%;
+        }
+
+    }
+
+    input.submit {
+        @include btn;
+    }
+
+}
