@@ -1,0 +1,53 @@
+.sf-header-search-toggle {
+    height: 48px;
+    position: absolute;
+    right: 54px;
+    top: 0;
+    width: 48px;
+
+    @include tablet {
+        height: 60px;
+    }
+
+    @include desktop {
+        height: 78px;
+        right: 5%;
+        top: 0;
+    }
+
+    @include widescreen {
+        right: 0;
+    }
+
+    &-link {
+        display: block;
+        position: relative;
+        height: 48px;
+
+        @include tablet {
+            height: 60px;
+        }
+
+        @include desktop {
+            height: 78px;
+        }
+    }
+
+    svg {
+        display: block;
+        margin: 0 auto;
+        height: 18px;
+        fill: #fff;
+        width: 18px;
+
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include desktop {
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+}

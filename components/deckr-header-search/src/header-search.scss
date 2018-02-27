@@ -1,0 +1,67 @@
+.sf-header-search {
+
+    background-color: $black;
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 11;
+    padding: 9px 24px 15px 24px;
+
+    @include mobile {
+        right: 50px;
+    }
+
+    @include desktop {
+        background-color: rgba($black, 0.8);
+        padding: 0 24px;
+    }
+
+    &--is-opened {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        @include desktop {
+
+            right: calc( 5% + 48px);
+            top: 0;
+            height: 78px;
+        }
+
+        @include widescreen {
+            right: 50px;
+            top: 0;
+            height: 78px;
+        }
+
+    }
+
+    &__label {
+        display: none;
+        margin: 0;
+    }
+
+    &__input {
+        border: 2px solid $primary-color;
+        border-right: none;
+        border-radius: 4px 0 0 4px;
+        @include fsz(16px);
+        line-height: 1;
+        padding: 6px;
+        margin: 0;
+    }
+
+    &__button {
+        @include btn;
+        padding: 9px;
+        border-radius: 0 4px 4px 0;
+        background-color: $primary-color;
+        color: #fff;
+
+        &:hover {
+            background-color: $black;
+            border-color: $primary-color;
+        }
+    }
+
+}
