@@ -32,7 +32,7 @@ The source files included are written in [Scss](http://sass-lang.com/). After [i
 
 ## Security
 
-If you discover any security search issues, please email support@interconectit.com instead of using the issue tracker.
+If you discover any security related issues, please email support@interconectit.com instead of using the issue tracker.
 
 ## Credits
 
