@@ -1,0 +1,60 @@
+.sf-author-header {
+    background-color: #fff;
+    @include clearfix;
+    margin-bottom: 24px;
+    padding: 24px;
+
+    @include tablet {
+        margin-bottom: 30px;
+        padding-top: 30px;
+        padding-right: 110 / 960 * 100%;
+        padding-bottom: 42px;
+        padding-left: 110 / 960 * 100%;
+    }
+
+    &__name {
+        font-weight: 900;
+        @include fsz(24px);
+        margin-bottom: 12px;
+
+        @include tablet {
+            @include fsz(36px);
+            margin-bottom: 24px;
+        }
+    }
+
+    &__avatar {
+        float: left;
+        margin-right: 18px;
+        margin-bottom: 18px;
+        max-width: 200px;
+        width: 40%;
+
+        @include mobile {
+            margin-right: 30px;
+        }
+
+        @include tablet {
+            margin-right: 0;
+            margin-bottom: 0;
+            width: 190 / 740 * 100%;
+        }
+    }
+
+    &__text {
+        @include fsz(16px);
+        @include lh(21px);
+
+        @include mobile {
+            @include fsz(16px);
+            @include lh(24px);
+        }
+
+        @include tablet {
+            float: right;
+            @include fsz(18px);
+            @include lh(24px);
+            width: 520 / 740 * 100%;
+        }
+    }
+}
