@@ -1,0 +1,17 @@
+{
+    "name": "deckr-tinymce",
+    "version": "0.0.0",
+    "description": "Tinymce tinymce component description",
+    "sass": "main.scss",
+    "main": "main.js",
+    "repository": "https://github.com/interconnectit/deckr/tree/master/components/deckr-tinymce",
+    "bugs": {
+        "url": "https://github.com/interconnectit/deckr/issues"
+    },
+    "keywords": [
+        "deckr",
+        "tinymce"
+    ],
+    "author": "interconnect/it",
+    "license": "MIT"
+}
