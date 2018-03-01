@@ -1,0 +1,223 @@
+// WordPress Generated Classes
+// http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+
+.alignnone {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aligncenter {
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.alignleft,
+.alignright {
+    height: auto;
+}
+
+.alignleft {
+    @include tablet {
+        float: left;
+    }
+}
+
+.alignright {
+    @include tablet {
+        margin-left: .5rem;
+        float: right;
+    }
+}
+
+img,
+figure {
+    display: block;
+    float: none;
+    @include mt(9px);
+    @include mb(24px);
+    height: auto;
+    width: 100%;
+
+
+
+    @include tablet {
+
+        @include mt(12px);
+        @include mb(36px);
+    }
+
+    @include desktop {
+        @include mb(42px);
+    }
+
+    &.aligncenter {
+
+        @include mt(9px);
+        @include mb(24px);
+
+
+
+        @include tablet {
+
+            @include mt(12px);
+            @include mb(36px);
+        }
+
+        @include desktop {
+            @include mb(42px);
+        }
+
+    }
+
+    &.alignleft {
+
+        @include desktop {
+            float: left;
+            @include mt(24px);
+            @include mt(36px);
+            margin-right: 90 / 850 * 100%;
+            width: 330 / 850 * 100%;
+        }
+
+    }
+
+    &.alignright {
+
+        @include desktop {
+            float: right;
+            @include mt(24px);
+            @include mt(36px);
+            margin-left: 90 / 850 * 100%;
+            width: 330 / 850 * 100%;
+        }
+
+    }
+
+}
+
+figure,
+.wp-caption {
+
+
+    width: 100vw !important;
+    @include mb(24px);
+
+    @include tablet {
+
+        width: 100% !important;
+        @include mb(36px);
+    }
+
+    @include desktop {
+        @include mb(42px);
+    }
+
+    img {
+        margin: 0;
+        width: 100% !important;
+
+    }
+
+    &.alignleft {
+        @include desktop {
+            float: left;
+            margin-right: 90 / 850 * 100%;
+            width: 330 / 850 * 100% !important;
+        }
+
+    }
+
+    &.alignright {
+        @include desktop {
+            float: right;
+            margin-left: 90 / 850 * 100%;
+            width: 330 / 850 * 100% !important;
+        }
+
+    }
+
+}
+
+figcaption,
+.wp-caption-text {
+    background-color: #fff;
+    @include fsz(14px);
+    line-height: 1;
+    padding: 12px;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @include mb(24px);
+
+    @include desktop {
+        @include mb(12px);
+        @include mb(42px);
+    }
+
+    figure {
+        margin-bottom: 0;
+        margin-top: 0;
+        img {
+            object-fit: cover;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.gallery-columns-2 {
+    figure {
+        @include fullimg-reset;
+        flex: 49%;
+        @include desktop {
+            flex: 48%;
+        }
+
+        img {
+            height: 150px;
+            @include desktop {
+                height: 250px;
+            }
+        }
+    }
+}
+
+.gallery-columns-3 {
+    figure {
+        @include fullimg-reset;
+        flex: 40%;
+        @include desktop {
+            flex: 31%;
+        }
+
+        img {
+            height: 150px;
+            @include desktop {
+                height: 200px;
+            }
+        }
+    }
+}
+
+.gallery-columns-4 {
+    figure {
+        @include fullimg-reset;
+        flex: 48.5%;
+        @include desktop {
+            flex: 24%;
+        }
+        img {
+            height: 150px;
+            @include desktop {
+                height: 200px;
+            }
+        }
+    }
+}

@@ -6,8 +6,8 @@
             width: 87%;
         }
 
-        @import "../common/typography";
-        @import "../common/wordpress";
-        @import "../common/gravity-form";
+        @import "typography";
+        @import "wordpress";
+        @import "gravity-form";
     }
 }

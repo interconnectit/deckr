@@ -1,0 +1,379 @@
+h1, h2, h3, h4, h5, h6 {
+    @include tablet {
+        padding-left: 6%;
+    }
+
+    @include desktop {
+        padding-left: 0;
+    }
+
+    @include widescreen {
+        padding-left: 110 / 850 * 100%;
+        width: 100%;
+    }
+}
+
+h1, h2 {
+    font-weight: bold;
+    @include fsz(27px);
+    line-height: 1;
+    @include mt(30px);
+    @include mb(12px);
+
+    @include desktop {
+        @include fsz(36px);
+        @include mt(42px);
+        @include mb(18px);
+    }
+}
+
+h3 {
+    font-weight: bold;
+    @include fsz(24px);
+    line-height: 1;
+    @include mt(30px);
+    @include mb(12px);
+
+    @include desktop {
+        @include fsz(30px);
+        @include mt(42px);
+        @include mb(12px);
+    }
+}
+
+h4 {
+    @include fsz(24px);
+    line-height: 1;
+    @include mt(30px);
+    @include mb(12px);
+
+    @include desktop {
+        @include fsz(27px);
+        @include mt(42px);
+        @include mb(12px);
+    }
+}
+
+h5 {
+    @include fsz(21px);
+    line-height: 1;
+    @include mt(30px);
+    @include mb(12px);
+
+    @include desktop {
+        @include fsz(24px);
+        @include mt(42px);
+        @include mb(12px);
+    }
+}
+
+h6 {
+    font-weight: bold;
+    @include fsz(18px);
+    line-height: 1;
+    @include mt(30px);
+    @include mb(12px);
+
+    @include desktop {
+        @include fsz(21px);
+        @include mt(36px);
+        @include mb(12px);
+    }
+}
+
+p {
+    @include fsz(16px);
+    @include lh(21px);
+    @include mb(21px);
+
+    @include tablet {
+        @include fsz(18px);
+        @include lh(27px);
+        @include mb(27px);
+        margin-left: 6%;
+        width: 87%;
+    }
+
+    @include desktop {
+        @include fsz(20px);
+        @include lh(30px);
+        @include mb(30px);
+        margin-left: 0;
+    }
+
+    @include widescreen {
+        margin-left: 110 / 850 * 100%;
+        width: 660 / 850 * 100%;
+    }
+
+}
+
+> p.sf-standfirst-content {
+    font-weight: bold;
+    @include fsz(18px);
+    @include lh(21px);
+
+    @include tablet {
+        @include fsz(24px);
+        @include lh(27px);
+    }
+
+    @include desktop {
+        @include fsz(27px);
+        @include lh(30px);
+        width: 740 / 850 * 100%;
+    }
+}
+
+ul, ol, dl {
+    counter-reset: bullets;
+    list-style-type: none;
+    @include fsz(16px);
+    @include lh(21px);
+    @include mb(21px);
+    padding: 0;
+
+    @include tablet {
+        @include fsz(18px);
+        @include lh(27px);
+        @include mb(27px);
+        margin-left: 6%;
+        width: 87%;
+    }
+
+    @include desktop {
+        @include fsz(20px);
+        @include lh(30px);
+        @include mb(30px);
+        width: 770 / 960 * 100%;
+
+    }
+
+    @include widescreen {
+        margin-left: 110 / 850 * 100%;
+    }
+
+    ul, ol {
+        margin-left: 1em;
+        margin-top: 9px;
+    }
+
+    li {
+
+        @include mb(9px);
+
+        @include desktop {
+            @include fsz(20px);
+            @include lh(27px);
+            @include mb(12px);
+        }
+
+        &:before {
+            font-weight: bold;
+            display: inline-block;
+        }
+    }
+
+}
+
+ul {
+    position: relative;
+    li {
+        &:before {
+            background-color: $primary-color;
+            border-radius: 99px;
+            content: '';
+            display: inline-block;
+            height: 9px;
+            margin-right: 9px;
+            width: 9px;
+            @include desktop {
+                margin-top: -6px;
+                margin-right: 16px;
+                margin-left: -24px;
+            }
+        }
+
+        ol {
+
+            li {
+                &:before {
+                    background: none;
+                    @include fsz(15px);
+                    line-height: 1;
+                    padding-left: 0;
+                    padding-right: 0;
+                    width: auto;
+                }
+
+                ul {
+                    li {
+                        &:before {
+                            background-color: $primary-color;
+                            content: '';
+                            padding: 0;
+                            width: 9px;
+                            height: 9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+ol {
+    li {
+        counter-increment: bullets;
+
+        &:before {
+            color: $primary-color;
+            content: counter(bullets) '.';
+            @include fsz(21px);
+            line-height: 1;
+            margin-left: 0;
+            padding-right: 12px;
+            width: 30px;
+            text-align: right;
+
+            @include desktop {
+                @include fsz(24px);
+                margin-left: -56px;
+                padding-right: 12px;
+                width: 56px;
+            }
+        }
+        ul {
+            @include mt(9px);
+            li {
+                &:before {
+                    content: '';
+                    padding: 0;
+                    height: 9px;
+                    width: 9px;
+                }
+            }
+
+            ol {
+                @include mt(9px);
+                li {
+                    list-style: decimal;
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+blockquote {
+    background: #fff;
+    padding: 18px 21px;
+    margin-top: 9px;
+    margin-bottom: 24px;
+
+    @include mobile {
+        padding: 21px 30px;
+    }
+
+    @include tablet {
+        padding: 30px 6%;
+    }
+
+    @include widescreen {
+        background: #fff;
+        display: block;
+        float: right;
+        margin-top: 42px;
+        margin-left: 90 / 850 * 100%;
+        margin-bottom: 42px;
+        padding: 36px 30px 42px 30px;
+        width: 330 / 850 * 100%;
+    }
+    p {
+        color: $black;
+        @include fsz(21px);
+        @include lh(24px);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-weight: 900;
+        font-style: italic;
+        @include tablet {
+            @include fsz(24px);
+            @include lh(30px);
+        }
+        @include desktop {
+            @include fsz(27px);
+            @include lh(33px);
+        }
+    }
+
+    cite {
+        color: $primary-color;
+        display: inline-block;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 0.75em;
+        line-height: 1.2;
+        margin-top: 9px;
+    }
+}
+
+code {
+    background-color: $black;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 3px 6px;
+}
+
+pre {
+    background-color: $black;
+    color: #fff;
+    padding: 18px;
+    @include tablet {
+        padding: 24px 36px;
+    }
+    @include desktop {
+        padding: 30px 42px;
+        @include mt(12px);
+        @include mb(42px);
+    }
+}
+
+table {
+    background-color: #fff;
+    border: 1px solid $grey;
+    th, td {
+        border: 1px solid $grey;
+        padding: 9px;
+    }
+}
+
+address {
+    @include fsz(16px);
+    @include lh(21px);
+    @include mb(21px);
+
+    @include tablet {
+        @include fsz(18px);
+        @include lh(27px);
+        @include mb(27px);
+        margin-left: 6%;
+        width: 87%;
+    }
+
+    @include desktop {
+        @include fsz(20px);
+        @include lh(30px);
+        @include mb(30px);
+        margin-left: 0;
+    }
+
+    @include widescreen {
+        margin-left: 110 / 850 * 100%;
+        width: 660 / 850 * 100%;
+    }
+}
