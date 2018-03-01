@@ -15,16 +15,18 @@
 
     &__image {
         width: 100%;
-        @include fullimg;
         height: 200px;
         height: 50vh;
         margin-bottom: 12px;
         object-fit: cover;
         object-position: 50% 70%;
+
+        @include fullimg;
+
         @include desktop {
             margin-bottom: 30px;
-            @include fullimg-reset;
 
+            @include fullimg-reset;
         }
     }
 
@@ -48,27 +50,32 @@
         width: 100%;
         align-self: flex-end;
 
-        @include tablet{
+        @include tablet {
             width: calc(100% - 230px);
         }
+
         @include desktop {
             width: calc(100% - 330px);
         }
     }
 
     &__title {
-        @include fsz(30px);
-        @include lh(33px);
         font-weight: 900;
         margin-bottom: 0;
+
+        @include fsz(30px);
+        @include lh(33px);
+
         @include mobile {
             @include fsz(36px);
             @include lh(39px);
         }
+
         @include tablet {
             @include fsz(42px);
             @include lh(45px);
         }
+
         @include desktop {
             @include fsz(54px);
             @include lh(57px);
@@ -138,7 +145,6 @@
         }
     }
 
-
     &__categories {
         font-size: 0;
         margin-left: 0;
@@ -158,6 +164,7 @@
             height: 50vh;
             margin-bottom: 42px;
         }
+
         @include tall-desktop {
             height: 600px;
             height: 60vh;
@@ -181,6 +188,7 @@
             height: 500px;
             height: 50vh;
         }
+
         @include tall-desktop {
             height: 600px;
             height: 60vh;
@@ -188,7 +196,6 @@
     }
 
     &--full &__content {
-
         @include desktop {
             position: absolute;
             display: flex;
@@ -201,21 +208,23 @@
 
     &--full &__title {
         color: #fff;
-        @include fsz(36px);
-        @include lh(36px);
         font-weight: 900;
-        text-shadow: 1px 1px 0 rgba($black, 1), 2px 2px 0 rgba($black, 1), 3px 3px 0 rgba($black, .3);
+        text-shadow: 1px 1px 0 rgba($black, 1), 2px 2px 0 rgba($black, 1), 3px 3px 0 rgba($black, 0.3);
         margin: 0;
         position: absolute;
         bottom: 24px;
         width: 100%;
 
+        @include fsz(36px);
+        @include lh(36px);
+
         @include desktop {
             bottom: auto;
             position: relative;
+            width: 880 / 1290 * 100%;
+
             @include fsz(72px);
             @include lh(72px);
-            width: 880 / 1290 * 100%;
         }
     }
 
@@ -236,23 +245,26 @@
 
         .sf-category {
             display: none;
+
             @include desktop {
-                &:link, &:visited {
+                &:link,
+                &:visited {
                     background-color: #000;
                 }
             }
-
         }
 
         .sf-author {
             font-weight: normal;
+
             @include fsz(12px);
             @include mt(6px);
 
             @include desktop {
                 color: #fff;
-                @include fsz(16px);
                 line-height: 1;
+
+                @include fsz(16px);
                 @include mt(9px);
             }
 
@@ -267,8 +279,9 @@
 
             @include desktop {
                 color: #fff;
-                @include fsz(12px);
                 line-height: 1;
+
+                @include fsz(12px);
                 @include mt(12px);
             }
         }

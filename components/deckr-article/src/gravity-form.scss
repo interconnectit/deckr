@@ -1,10 +1,10 @@
 .gform_wrapper {
-
     margin: 0;
     margin-bottom: 24px;
     padding: 24px;
     background: #fff;
     height: auto !important;
+
     @include clearfix;
 
     @include mobile {
@@ -26,13 +26,9 @@
         padding-right: 90 / 850 * 100%;
     }
 
-    .gform_body {
-
-    }
-
-
     .gform_title {
         padding: 0;
+
         @include fsz(24px);
 
         @include mobile {
@@ -57,11 +53,9 @@
         margin: 0 !important;
         padding: 0;
     }
-
 }
 
 .gform_fields.top_label {
-
     .gfield_label {
         margin: 0;
         font-weight: 700;
@@ -97,35 +91,33 @@
 
 .gform_wrapper .field_description_below .gfield_description {
     font-style: italic;
+    padding-top: 3px;
+
     @include fsz(16px);
     @include lh(18px);
-    padding-top: 3px;
 }
 
 .gform_wrapper input[type="file"] {
     display: block;
     background-color: $light-grey;
     border: none;
-    @include fsz(16px);
-    @include lh(30px);
     padding: 12px 18px;
     width: 100%;
+
+    @include fsz(16px);
+    @include lh(30px);
 }
 
 .gform_wrapper .screen-reader-text {
     font-style: italic;
-    @include fsz(16px);
     line-height: 1;
-}
 
-.gform_wrapper .top_label input.medium,
-.gform_wrapper .top_label select.medium {
-
+    @include fsz(16px);
 }
 
 .gform_wrapper .gfield_checkbox li label,
 .gform_wrapper .gfield_radio li label {
-    padding:4px 0 0 9px;
+    padding: 4px 0 0 9px;
 }
 
 .gform_confirmation_message {
@@ -133,17 +125,18 @@
     border: 1px solid $light-grey;
     color: #c00;
     font-weight: bold;
-    @include fsz(21px);
-    @include lh(24px);
     margin-bottom: 36px;
     padding: 18px;
     text-align: center;
 
+    @include fsz(21px);
+    @include lh(24px);
+
     @include tablet {
-        @include fsz(24px);
-        @include lh(27px);
         margin-bottom: 42px;
         padding: 24px;
-    }
 
+        @include fsz(24px);
+        @include lh(27px);
+    }
 }

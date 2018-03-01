@@ -15,10 +15,11 @@
     }
 
     &__title {
-        @include fsz(14px);
         font-weight: 700;
         line-height: 1;
         text-transform: uppercase;
+
+        @include fsz(14px);
 
         @include tablet {
             margin: 2px 0 0;
@@ -27,8 +28,9 @@
         }
 
         @include desktop {
-            @include fsz(18px);
             margin: 1px 9px 0 0;
+
+            @include fsz(18px);
         }
     }
 
@@ -48,7 +50,6 @@
     }
 
     &__link {
-        @include fsz(10px);
         font-weight: 700;
         padding: 3px;
         display: block;
@@ -58,9 +59,12 @@
         background: $primary-color;
         transition: box-shadow 0.5s ease-in-out;
 
+        @include fsz(10px);
+
         @include desktop {
-            @include fsz(12px);
             padding: 3px 6px;
+
+            @include fsz(12px);
         }
 
         &:hover {

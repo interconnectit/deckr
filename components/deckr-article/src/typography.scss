@@ -1,4 +1,9 @@
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     @include tablet {
         padding-left: 6%;
     }
@@ -13,10 +18,12 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-h1, h2 {
+h1,
+h2 {
     font-weight: bold;
-    @include fsz(27px);
     line-height: 1;
+
+    @include fsz(27px);
     @include mt(30px);
     @include mb(12px);
 
@@ -29,8 +36,9 @@ h1, h2 {
 
 h3 {
     font-weight: bold;
-    @include fsz(24px);
     line-height: 1;
+
+    @include fsz(24px);
     @include mt(30px);
     @include mb(12px);
 
@@ -42,8 +50,9 @@ h3 {
 }
 
 h4 {
-    @include fsz(24px);
     line-height: 1;
+
+    @include fsz(24px);
     @include mt(30px);
     @include mb(12px);
 
@@ -55,8 +64,9 @@ h4 {
 }
 
 h5 {
-    @include fsz(21px);
     line-height: 1;
+
+    @include fsz(21px);
     @include mt(30px);
     @include mb(12px);
 
@@ -69,8 +79,9 @@ h5 {
 
 h6 {
     font-weight: bold;
-    @include fsz(18px);
     line-height: 1;
+
+    @include fsz(18px);
     @include mt(30px);
     @include mb(12px);
 
@@ -87,17 +98,19 @@ p {
     @include mb(21px);
 
     @include tablet {
+        width: 87%;
+        margin-left: 6%;
+
         @include fsz(18px);
         @include lh(27px);
         @include mb(27px);
-        margin-left: 6%;
-        width: 87%;
     }
 
     @include desktop {
         @include fsz(20px);
         @include lh(30px);
         @include mb(30px);
+
         margin-left: 0;
     }
 
@@ -105,11 +118,11 @@ p {
         margin-left: 110 / 850 * 100%;
         width: 660 / 850 * 100%;
     }
-
 }
 
 > p.sf-standfirst-content {
     font-weight: bold;
+
     @include fsz(18px);
     @include lh(21px);
 
@@ -119,47 +132,52 @@ p {
     }
 
     @include desktop {
+        width: 740 / 850 * 100%;
+
         @include fsz(27px);
         @include lh(30px);
-        width: 740 / 850 * 100%;
     }
 }
 
-ul, ol, dl {
+ul,
+ol,
+dl {
     counter-reset: bullets;
     list-style-type: none;
+    padding: 0;
+
     @include fsz(16px);
     @include lh(21px);
     @include mb(21px);
-    padding: 0;
 
     @include tablet {
+        margin-left: 6%;
+        width: 87%;
+
         @include fsz(18px);
         @include lh(27px);
         @include mb(27px);
-        margin-left: 6%;
-        width: 87%;
     }
 
     @include desktop {
+        width: 770 / 960 * 100%;
+
         @include fsz(20px);
         @include lh(30px);
         @include mb(30px);
-        width: 770 / 960 * 100%;
-
     }
 
     @include widescreen {
         margin-left: 110 / 850 * 100%;
     }
 
-    ul, ol {
+    ul,
+    ol {
         margin-left: 1em;
         margin-top: 9px;
     }
 
     li {
-
         @include mb(9px);
 
         @include desktop {
@@ -168,16 +186,16 @@ ul, ol, dl {
             @include mb(12px);
         }
 
-        &:before {
+        &::before {
             font-weight: bold;
             display: inline-block;
         }
     }
-
 }
 
 ul {
     position: relative;
+
     li {
         &:before {
             background-color: $primary-color;
@@ -187,6 +205,7 @@ ul {
             height: 9px;
             margin-right: 9px;
             width: 9px;
+
             @include desktop {
                 margin-top: -6px;
                 margin-right: 16px;
@@ -195,9 +214,8 @@ ul {
         }
 
         ol {
-
             li {
-                &:before {
+                &::before {
                     background: none;
                     @include fsz(15px);
                     line-height: 1;
@@ -208,7 +226,7 @@ ul {
 
                 ul {
                     li {
-                        &:before {
+                        &::before {
                             background-color: $primary-color;
                             content: '';
                             padding: 0;
@@ -226,27 +244,31 @@ ol {
     li {
         counter-increment: bullets;
 
-        &:before {
+        &::before {
             color: $primary-color;
             content: counter(bullets) '.';
-            @include fsz(21px);
             line-height: 1;
             margin-left: 0;
             padding-right: 12px;
             width: 30px;
             text-align: right;
 
+            @include fsz(21px);
+
             @include desktop {
-                @include fsz(24px);
                 margin-left: -56px;
                 padding-right: 12px;
                 width: 56px;
+
+                @include fsz(24px);
             }
         }
+
         ul {
             @include mt(9px);
+
             li {
-                &:before {
+                &::before {
                     content: '';
                     padding: 0;
                     height: 9px;
@@ -256,9 +278,11 @@ ol {
 
             ol {
                 @include mt(9px);
+
                 li {
                     list-style: decimal;
-                    &:before {
+
+                    &::before {
                         display: none;
                     }
                 }
@@ -292,19 +316,23 @@ blockquote {
         padding: 36px 30px 42px 30px;
         width: 330 / 850 * 100%;
     }
+
     p {
         color: $black;
-        @include fsz(21px);
-        @include lh(24px);
         margin: 0;
         padding: 0;
         width: 100%;
         font-weight: 900;
         font-style: italic;
+
+        @include fsz(21px);
+        @include lh(24px);
+
         @include tablet {
             @include fsz(24px);
             @include lh(30px);
         }
+
         @include desktop {
             @include fsz(27px);
             @include lh(33px);
@@ -333,11 +361,14 @@ pre {
     background-color: $black;
     color: #fff;
     padding: 18px;
+
     @include tablet {
         padding: 24px 36px;
     }
+
     @include desktop {
         padding: 30px 42px;
+
         @include mt(12px);
         @include mb(42px);
     }
@@ -346,7 +377,9 @@ pre {
 table {
     background-color: #fff;
     border: 1px solid $grey;
-    th, td {
+
+    th,
+    td {
         border: 1px solid $grey;
         padding: 9px;
     }
@@ -358,18 +391,20 @@ address {
     @include mb(21px);
 
     @include tablet {
+        margin-left: 6%;
+        width: 87%;
+
         @include fsz(18px);
         @include lh(27px);
         @include mb(27px);
-        margin-left: 6%;
-        width: 87%;
     }
 
     @include desktop {
+        margin-left: 0;
+
         @include fsz(20px);
         @include lh(30px);
         @include mb(30px);
-        margin-left: 0;
     }
 
     @include widescreen {
