@@ -17,7 +17,7 @@
         "build": "../../scripts/build",
         "lint": "../../scripts/lint"
     },
-    "devDependencies": {
+    "dependencies": {
         "deckr-article": "0.0.1-1",
         "deckr-author": "0.0.1-1",
         "deckr-card": "0.0.1-1",
