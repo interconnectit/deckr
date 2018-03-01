@@ -13,7 +13,36 @@
     ],
     "author": "interconnect/it",
     "license": "MIT",
+    "scripts": {
+        "build": "../../scripts/build",
+        "lint": "../../scripts/lint"
+    },
     "devDependencies": {
-        "deckr-reboot": "^0.0.1-2"
+        "deckr-article": "0.0.1-0",
+        "deckr-author": "0.0.1-0",
+        "deckr-card": "0.0.1-0",
+        "deckr-carousel": "0.0.1-0",
+        "deckr-category": "0.0.1-0",
+        "deckr-comment": "0.0.1-0",
+        "deckr-content": "0.0.1-0",
+        "deckr-contents": "0.0.1-0",
+        "deckr-copyright": "0.0.1-0",
+        "deckr-cta": "0.0.1-0",
+        "deckr-date": "0.0.1-0",
+        "deckr-featured": "0.0.1-0",
+        "deckr-footer": "0.0.1-0",
+        "deckr-global-menu": "0.0.1-0",
+        "deckr-gravity-form": "0.0.1-0",
+        "deckr-header": "0.0.1-0",
+        "deckr-header-search": "0.0.1-0",
+        "deckr-icit-credit": "0.0.1-0",
+        "deckr-logo": "0.0.1-0",
+        "deckr-pagination": "0.0.1-0",
+        "deckr-primary-menu": "0.0.1-0",
+        "deckr-reboot": "0.0.1-2",
+        "deckr-related": "0.0.1-0",
+        "deckr-search": "0.0.1-0",
+        "deckr-sharing": "0.0.1-0",
+        "deckr-tinymce": "0.0.1-0"
     }
 }
