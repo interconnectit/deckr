@@ -1,5 +1,4 @@
 .sf-comments {
-
     @include desktop {
         width: 87%;
         margin-bottom: 30px;
@@ -23,12 +22,12 @@
         @include desktop {
             margin-bottom: 30px;
         }
-
     }
 
     &__children {
         padding-left: 12px;
         margin-top: 18px;
+
         @include widescreen {
             padding-left: 30px;
         }
@@ -39,7 +38,6 @@
     }
 
     &__navigation-list {
-
         list-style: none;
         padding: 0;
 
@@ -55,25 +53,16 @@
         margin-bottom: 12px;
 
         @include mobile {
-
             margin: 0;
-        }
-
-        @include desktop {
-
         }
 
         a {
             @include btn;
 
-            &:hover, &:active {
+            &:hover,
+            &:active {
                 color: #fff;
             }
-
         }
-
     }
-
-
-
 }

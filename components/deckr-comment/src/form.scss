@@ -1,5 +1,4 @@
 .sf-comments {
-
     margin-bottom: 24px;
 
     @include desktop {
@@ -27,10 +26,6 @@
         }
     }
 
-    .comment-form-comment {
-
-    }
-
     p {
         margin-bottom: 24px;
 
@@ -41,10 +36,11 @@
 
     label {
         display: block;
-        @include fsz(14px);
-        @include lh(18px);
         font-weight: 700;
         margin-bottom: 3px;
+
+        @include fsz(14px);
+        @include lh(18px);
 
         @include desktop {
             @include fsz(16px);
@@ -53,11 +49,9 @@
     }
 
     .comment-form-comment {
-
         @include desktop {
             width: 100%;
         }
-
     }
 
     textarea {
@@ -72,17 +66,16 @@
         border: 1px solid $grey;
         color: $black;
         font-family: $base-font-family;
-        @include fsz(14px);
         padding: 9px 6px;
+
+        @include fsz(14px);
 
         @include desktop {
             width: 440 / 690 * 100%;
         }
-
     }
 
     input.submit {
         @include btn;
     }
-
 }
