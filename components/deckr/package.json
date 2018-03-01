@@ -45,6 +45,7 @@
         "deckr-related": "^0.0.1-4",
         "deckr-search": "^0.0.1-4",
         "deckr-sharing": "^0.0.1-4",
+        "deckr-support": "0.0.1-3",
         "deckr-tinymce": "^0.0.1-4"
     }
 }
