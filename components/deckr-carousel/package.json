@@ -14,6 +14,10 @@
     ],
     "author": "interconnect/it",
     "license": "MIT",
+    "scripts": {
+        "build": "../../scripts/build",
+        "lint": "../../scripts/lint"
+    },
     "dependencies": {
         "deckr-support": "^0.0.1-1"
     }

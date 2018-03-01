@@ -13,5 +13,9 @@
         "reboot"
     ],
     "author": "interconnect/it",
-    "license": "MIT"
+    "license": "MIT",
+    "scripts": {
+        "build": "../../scripts/build",
+        "lint": "../../scripts/lint"
+    }
 }
