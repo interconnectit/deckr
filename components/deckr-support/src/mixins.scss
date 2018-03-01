@@ -1,0 +1,162 @@
+/// Mobile
+/// @access public
+@mixin mobile {
+    @media (min-width: $mobile) {
+        @content;
+    }
+}
+
+/// Tablet
+/// @access public
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+/// Desktop
+/// @access public
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+/// Widescreen
+/// @access public
+@mixin widescreen {
+    @media (min-width: $widescreen) {
+        @content;
+    }
+}
+
+/// Widescreen
+/// @access public
+@mixin tall-desktop {
+    @media (min-width: $desktop) and (min-height: 900px) {
+        @content;
+    }
+}
+
+/// Clearfix
+/// @access public
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: " ";
+        display: table;
+    }
+}
+
+/// Text replacement/hide
+/// @access public
+@mixin texthide {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
+
+/// Container
+/// @access public
+@mixin container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 5%;
+    padding-left: 5%;
+    @include clearfix;
+    @include mobile {
+
+    }
+    @include tablet {
+
+    }
+    @include desktop {
+
+    }
+    @include widescreen {
+        max-width: $container-widescreen-width;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+/// Row
+/// @access public
+@mixin row {
+    margin-right: -15px;
+    margin-left: -15px;
+    @include clearfix;
+}
+
+// Easier way to convert to rems, with fallback
+// Could probably be made much better
+@function calculateRem($size) {
+    $remSize: $size / $root-font-size;
+    @return #{$remSize}rem;
+}
+
+@mixin fsz($size) {
+    font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
+}
+
+@mixin lh($size) {
+    line-height: $size; //Fallback in px
+    line-height: calculateRem($size);
+}
+
+@mixin mt($size) {
+    margin-top: $size; //Fallback in px
+    margin-top: calculateRem($size);
+}
+
+@mixin mb($size) {
+    margin-bottom: $size; //Fallback in px
+    margin-bottom: calculateRem($size);
+}
+
+//Forces image to full width of viewport
+@mixin fullimg {
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: none;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+}
+
+@mixin fullimg-reset {
+    left: auto;
+    margin-left: 0;
+    margin-right: 0;
+    right: auto;
+    width: 100%;
+}
+
+//Basic button
+@mixin btn {
+    font-family: $base-font-family;
+    @include fsz(12px);
+    font-weight: 700;
+    padding: 6px;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $primary-color;
+    background: #fff;
+    border-radius: 4px;
+    border: 2px solid $primary-color;
+
+    &:link,
+    &:visited {
+        color: $primary-color;
+    }
+
+    &:hover {
+        color: #fff;
+        background: $primary-color;
+    }
+}
