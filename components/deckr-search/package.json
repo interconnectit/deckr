@@ -1,6 +1,6 @@
 {
     "name": "deckr-search",
-    "version": "0.0.1-1",
+    "version": "0.0.1-2",
     "description": "Search search component description",
     "sass": "main.scss",
     "main": "main.js",
@@ -15,6 +15,6 @@
     "author": "interconnect/it",
     "license": "MIT",
     "dependencies": {
-        "deckr-support": "0.0.1-0"
+        "deckr-support": "^0.0.1-1"
     }
 }
