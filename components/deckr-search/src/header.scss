@@ -1,15 +1,14 @@
 .sf-search-header {
-
     &__title {
-
-        @include fsz(24px);
         margin-bottom: 18px;
 
+        @include fsz(24px);
+
         @include tablet {
-            @include fsz(36px);
             line-height: 1;
             margin-bottom: 24px;
+
+            @include fsz(36px);
         }
     }
-
 }
