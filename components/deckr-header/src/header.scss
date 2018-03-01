@@ -25,6 +25,7 @@
     &__container {
         height: inherit;
         position: relative;
+
         @include container;
     }
 
