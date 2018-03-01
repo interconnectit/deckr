@@ -14,18 +14,19 @@
         color: #fff;
         display: inline-block;
         font-family: $headings-font-family;
-        @include fsz(14px);
         line-height: 1;
         margin: 6px;
         text-transform: uppercase;
+
+        @include fsz(14px);
     }
 
     &__link {
-        &:link, &:visited {
+        &:link,
+        &:visited {
             color: #fff;
             display: block;
             padding: 6px;
         }
     }
-
 }
