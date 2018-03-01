@@ -1,5 +1,4 @@
 .sf-header-search {
-
     background-color: $black;
     display: none;
     position: absolute;
@@ -22,8 +21,7 @@
         align-items: center;
 
         @include desktop {
-
-            right: calc( 5% + 48px);
+            right: calc(5% + 48px);
             top: 0;
             height: 78px;
         }
@@ -33,7 +31,6 @@
             top: 0;
             height: 78px;
         }
-
     }
 
     &__label {
@@ -45,23 +42,24 @@
         border: 2px solid $primary-color;
         border-right: none;
         border-radius: 4px 0 0 4px;
-        @include fsz(16px);
         line-height: 1;
         padding: 6px;
         margin: 0;
+
+        @include fsz(16px);
     }
 
     &__button {
-        @include btn;
         padding: 9px;
         border-radius: 0 4px 4px 0;
         background-color: $primary-color;
         color: #fff;
+
+        @include btn;
 
         &:hover {
             background-color: $black;
             border-color: $primary-color;
         }
     }
-
 }
