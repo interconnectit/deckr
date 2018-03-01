@@ -51,11 +51,10 @@
 /// Text replacement/hide
 /// @access public
 @mixin texthide {
-    font: 0/0 a;
+    font: 0;
     text-shadow: none;
     color: transparent;
 }
-
 
 /// Container
 /// @access public
@@ -64,16 +63,9 @@
     margin-left: auto;
     padding-right: 5%;
     padding-left: 5%;
+
     @include clearfix;
-    @include mobile {
 
-    }
-    @include tablet {
-
-    }
-    @include desktop {
-
-    }
     @include widescreen {
         max-width: $container-widescreen-width;
         padding-right: 0;
@@ -86,6 +78,7 @@
 @mixin row {
     margin-right: -15px;
     margin-left: -15px;
+
     @include clearfix;
 }
 
@@ -93,27 +86,28 @@
 // Could probably be made much better
 @function calculateRem($size) {
     $remSize: $size / $root-font-size;
+
     @return #{$remSize}rem;
 }
 
 @mixin fsz($size) {
     font-size: $size; //Fallback in px
-    font-size: calculateRem($size);
+    font-size: calculateRem($size); /* stylelint-disable-line function-name-case */
 }
 
 @mixin lh($size) {
     line-height: $size; //Fallback in px
-    line-height: calculateRem($size);
+    line-height: calculateRem($size); /* stylelint-disable-line function-name-case */
 }
 
 @mixin mt($size) {
     margin-top: $size; //Fallback in px
-    margin-top: calculateRem($size);
+    margin-top: calculateRem($size); /* stylelint-disable-line function-name-case */
 }
 
 @mixin mb($size) {
     margin-bottom: $size; //Fallback in px
-    margin-bottom: calculateRem($size);
+    margin-bottom: calculateRem($size); /* stylelint-disable-line function-name-case */
 }
 
 //Forces image to full width of viewport
@@ -138,7 +132,6 @@
 //Basic button
 @mixin btn {
     font-family: $base-font-family;
-    @include fsz(12px);
     font-weight: 700;
     padding: 6px;
     display: inline-block;
@@ -149,6 +142,8 @@
     background: #fff;
     border-radius: 4px;
     border: 2px solid $primary-color;
+
+    @include fsz(12px);
 
     &:link,
     &:visited {

@@ -23,7 +23,7 @@ $h5-font-size: 1.25rem !default;
 $h6-font-size: 1rem !default;
 
 // Colors
-$primary-color: #EC6D02 !default;
+$primary-color: #ec6d02 !default;
 $background-color: mix($primary-color, #eee, 3%);
 // Greys - adds a bit of depth from primary color
 $light-grey: mix($primary-color, #eee, 3%);
@@ -31,7 +31,7 @@ $grey: mix($primary-color, #ccc, 3%);
 $dark-grey: mix($primary-color, #999, 3%);
 $black: mix($primary-color, #222, 3%);
 
-$cta-color: #688E26;
+$cta-color: #688e26;
 
 // Links
 $link-color: $primary-color !default;
@@ -56,4 +56,4 @@ $arrow-size: 50px;
 
 //Gap between cards
 $card-gap: 30px;
-$card-background-color: #FFF !default;
+$card-background-color: #fff !default;
