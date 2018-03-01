@@ -1,8 +1,9 @@
 .sf-author-header {
     background-color: #fff;
-    @include clearfix;
     margin-bottom: 24px;
     padding: 24px;
+
+    @include clearfix;
 
     @include tablet {
         margin-bottom: 30px;
@@ -14,12 +15,14 @@
 
     &__name {
         font-weight: 900;
-        @include fsz(24px);
         margin-bottom: 12px;
 
+        @include fsz(24px);
+
         @include tablet {
-            @include fsz(36px);
             margin-bottom: 24px;
+
+            @include fsz(36px);
         }
     }
 
@@ -52,9 +55,10 @@
 
         @include tablet {
             float: right;
+            width: 520 / 740 * 100%;
+
             @include fsz(18px);
             @include lh(24px);
-            width: 520 / 740 * 100%;
         }
     }
 }

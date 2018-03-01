@@ -1,5 +1,4 @@
 .sf-author-bio {
-
     background-color: #fff;
     margin-bottom: 24px;
     padding: 24px;
@@ -16,27 +15,21 @@
         padding-left: 100 / 850 * 100%;
         padding-bottom: 36px;
         padding-right: 60 / 850 * 100%;
-
-
     }
 
     &__heading {
         flex: 100%;
         margin-bottom: 6px;
 
-        @include mobile {
-
-        }
-
         @include desktop {
-            @include fsz(24px);
             line-height: 1;
             margin-bottom: 12px;
+
+            @include fsz(24px);
         }
     }
 
     &__avatar {
-
         @include mobile {
             width: 30%;
         }
@@ -49,6 +42,7 @@
             margin-bottom: 9px;
             max-width: none;
             width: 100%;
+
             @include desktop {
                 margin-bottom: 3px;
             }
@@ -56,15 +50,16 @@
     }
 
     &__name {
+        margin-bottom: 6px;
 
         @include fsz(18px);
         @include lh(21px);
-        margin-bottom: 6px;
 
         @include desktop {
+            margin-bottom: 0;
+
             @include fsz(16px);
             @include lh(18px);
-            margin-bottom: 0;
         }
     }
 
@@ -79,16 +74,13 @@
     }
 
     &__text {
+        margin-bottom: 21px;
+
         @include fsz(16px);
         @include lh(21px);
-        margin-bottom: 21px;
-        @include desktop {
-
-        }
     }
 
     &__link {
         margin-bottom: 0;
     }
-
 }
