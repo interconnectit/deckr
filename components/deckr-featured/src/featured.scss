@@ -12,9 +12,7 @@
 
 // Featured Post widget
 .sf-featured {
-
     background-color: $card-background-color;
-
     margin-bottom: 24px;
     position: relative;
     flex: 100%;
@@ -22,12 +20,9 @@
     @include tablet {
         margin-bottom: 30px;
     }
+
     @include desktop {
         margin-bottom: 30px;
-    }
-
-    &__header {
-
     }
 
     &__image {
@@ -58,22 +53,19 @@
     }
 
     &__title {
-        @include fsz(24px);
-        @include lh(27px);
         font-weight: bold;
         padding-left: 30px;
         margin-bottom: 10px;
         width: 490 / 1290 * 100%;
 
-        @include desktop {
-
-        }
+        @include fsz(24px);
+        @include lh(27px);
     }
 
     &__content {
+        padding-left: 30px;
+
         @include fsz(16px);
         @include lh(21px);
-        padding-left: 30px;
     }
-
 }
