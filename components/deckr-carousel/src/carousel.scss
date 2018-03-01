@@ -1,6 +1,4 @@
-
 .sf-carousel {
-
     position: relative;
     margin-bottom: 24px;
 
@@ -12,22 +10,25 @@
         margin-bottom: 42px;
     }
 
-    &--2, &--3, &--4 {
+    &--2,
+    &--3,
+    &--4 {
         width: 100%;
 
         @include desktop {
             width: calc(100% + #{$card-gap});
         }
 
-        &:after {
+        &::after {
             background-color: $background-color;
             content: '';
             display: block;
             height: 100%;
             position: absolute;
-            right: 0px;
+            right: 0;
             top: 0;
             width: 0;
+
             @include desktop {
                 width: $card-gap;
             }
@@ -45,29 +46,23 @@
             }
         }
     }
-
 }
 
-
-
-.sf-card {
-
-    .sf-carousel & {
-
+.sf-card { /* stylelint-disable-line no-descending-specificity */
+    .sf-carousel & { /* stylelint-disable-line no-duplicate-selectors */
         &__text {
             min-height: 200px;
             overflow: hidden;
             max-height: 200px;
+
             @include tablet {
                 max-height: none;
                 overflow: visible;
             }
         }
-
     }
 
     .sf-carousel--1 & {
-
         margin-right: 0;
         margin-bottom: 0;
         position: relative;
@@ -77,15 +72,13 @@
         }
 
         &__text {
-
-            background: rgba(#fff,0.9);
+            background: rgba(#fff, 0.9);
             bottom: 6px;
             left: 6px;
             padding: 9px 18px;
             position: absolute;
             width: 95%;
-            width: calc( 100% - 12px);
-
+            width: calc(100% - 12px);
 
             @include tablet {
                 bottom: 30px;
@@ -97,35 +90,34 @@
                 padding-bottom: 42px;
                 width: 1130 / 1290 * 100%;
             }
-
         }
 
         &__title {
-
-            @include fsz(18px);
             line-height: 1;
             margin-bottom: 0;
 
+            @include fsz(18px);
+
             @include tablet {
-                @include fsz(24px);
                 margin-bottom: 3px;
+
+                @include fsz(24px);
             }
 
             @include desktop {
-                @include fsz(30px);
                 margin-bottom: 3px;
+
+                @include fsz(30px);
             }
         }
 
         &__excerpt {
-
             @include desktop {
                 display: block;
             }
         }
 
         &__meta {
-
             @include tablet {
                 bottom: 30px;
                 display: flex;
@@ -135,11 +127,9 @@
                 width: 1130 / 1290 * 100%;
             }
         }
-
     }
 
     .sf-carousel--2 & {
-
         margin-right: 0;
         margin-bottom: 0;
 
@@ -152,6 +142,7 @@
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
+
             @include tablet {
                 min-height: 290px;
                 padding-right: 0;
@@ -161,9 +152,10 @@
 
         &__title {
             @include tablet {
-                @include fsz(18px);
                 padding-left: 30px;
                 width: 190 / 630 * 100%;
+
+                @include fsz(18px);
             }
         }
 
@@ -173,11 +165,9 @@
                 width: 410 / 630 * 100%;
             }
         }
-
     }
 
     .sf-carousel--3 & {
-
         margin-right: 0;
         margin-bottom: 0;
 
@@ -186,19 +176,15 @@
         }
 
         &__text {
-
             @include tablet {
                 padding-top: 24px;
                 padding-bottom: 36px;
                 min-height: 336px;
             }
-
         }
-
     }
 
     .sf-carousel--4 & {
-
         margin-right: 0;
         margin-bottom: 0;
 
@@ -211,10 +197,8 @@
         }
 
         &__text {
-
             @include tablet {
                 padding: 21px 24px 42px 24px;
-
                 overflow: hidden;
             }
 
@@ -242,16 +226,11 @@
             background-color: #fff;
             z-index: 9;
         }
-
     }
-
 }
-
-
 
 //// NEXT PREV BUTTONS
 .slick-arrow {
-
     background-color: $light-grey;
     border: none;
     border-radius: 999px;
@@ -259,19 +238,19 @@
     width: $arrow-size / 1.5;
     position: absolute;
     top: 50%;
-    top: calc(25% - #{$arrow-size / 1.5} / 2 );
+    top: calc(25% - #{$arrow-size / 1.5} / 2);
     z-index: 4;
 
     @include texthide;
 
-    @include tablet{
+    @include tablet {
         height: $arrow-size;
         width: $arrow-size;
         top: 50%;
-        top: calc(25% - #{$arrow-size} / 2 );
+        top: calc(25% - #{$arrow-size} / 2);
     }
 
-    &:before {
+    &::before {
         content: '?';
         color: $primary-color;
         font-family: Arial, Serif;
@@ -298,39 +277,35 @@
     }
 
     &:active {
-        &:before {
+        &::before {
             color: $black;
         }
     }
-
 }
 
 .slick-prev {
-
     left: - ($arrow-size / 1.5) / 2;
 
     @include tablet {
         left: - $arrow-size / 2;
     }
 
-    &:before {
+    &::before {
         content: '\2190';
         left: 5px;
         transition: left 0.3s ease-in-out;
     }
-    &:hover {
-        &:before {
 
+    &:hover {
+        &::before {
             @include tablet {
                 left: 0;
             }
-
         }
     }
 }
 
 .slick-next {
-
     right: round(($arrow-size / 1.5) / -2) + 1px;
 
     @include tablet {
@@ -341,17 +316,19 @@
         right: - $arrow-size / 2;
     }
 
-    &:before {
+    &::before {
         content: '\2192';
         left: 6px;
         transition: right 0.3s ease-in-out;
+
         @include tablet {
             left: auto;
             right: 5px;
         }
     }
+
     &:hover {
-        &:before {
+        &::before {
             @include tablet {
                 right: 0;
             }
@@ -360,19 +337,15 @@
 
     .sf-carousel--2 &,
     .sf-carousel--3 &,
-    .sf-carousel--4 &{
+    .sf-carousel--4 & {
         @include desktop {
             right: - $arrow-size / 2 + $card-gap;
         }
-
     }
-
 }
-
 
 ///// DOTS
 .slick-dots {
-
     list-style: none;
     margin: 0;
     padding: 0;
@@ -392,15 +365,12 @@
         }
     }
 
-
     li {
         display: inline-block;
         margin-left: 9px;
     }
 
-
     button {
-
         background-color: #fff;
         border: 1px solid $primary-color;
         border-radius: 999px;
@@ -408,6 +378,7 @@
         margin: 0;
         padding: 0;
         width: 12px;
+
         @include texthide;
 
         @include tablet {
