@@ -1,6 +1,6 @@
 {
     "name": "deckr-primary-menu",
-    "version": "0.0.1-4",
+    "version": "0.0.1-5",
     "description": "Primary menu search component description",
     "sass": "main.scss",
     "main": "main.js",
@@ -21,6 +21,6 @@
         "test": "../../scripts/npm-run-all lint build"
     },
     "dependencies": {
-        "deckr-support": "^0.0.1-3"
+        "deckr-support": "^0.0.1-4"
     }
 }
