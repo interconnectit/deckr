@@ -15,6 +15,6 @@
     "author": "interconnect/it",
     "license": "MIT",
     "devDependencies": {
-        "deckr-support": "^0.0.1-0"
+        "deckr-support": "0.0.1-0"
     }
 }
