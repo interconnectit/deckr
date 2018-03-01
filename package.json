@@ -4,7 +4,7 @@
         "postinstall": "lerna bootstrap --hoist",
         "start": "start-storybook -p 9001",
         "publish": "build-storybook -o build && gh-pages -d build",
-        "release": "lerna publish",
+        "release": "lerna publish --skip-git",
         "test": "stylelint --formatter verbose 'components/**/*.scss'"
     },
     "devDependencies": {
