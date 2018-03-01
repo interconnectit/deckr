@@ -1,6 +1,6 @@
 {
     "name": "deckr-article",
-    "version": "0.0.1-0",
+    "version": "0.0.1-1",
     "description": "Article component description",
     "sass": "main.scss",
     "main": "main.js",
@@ -15,6 +15,6 @@
     "author": "interconnect/it",
     "license": "MIT",
     "devDependencies": {
-        "deckr-support": "0.0.0"
+        "deckr-support": "^0.0.1-0"
     }
 }

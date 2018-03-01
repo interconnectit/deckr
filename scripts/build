@@ -1,0 +1,3 @@
+#!/bin/bash
+set -e
+$(dirname $0)/npm node-sass --include-path node_modules --output-style compressed main.scss build/main.css

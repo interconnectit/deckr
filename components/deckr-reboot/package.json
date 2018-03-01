@@ -1,6 +1,6 @@
 {
     "name": "deckr-reboot",
-    "version": "0.0.1-2",
+    "version": "0.0.1-3",
     "description": "Reboot the browsers default styles",
     "sass": "main.scss",
     "main": "main.js",

@@ -1,6 +1,6 @@
 {
     "name": "deckr-support",
-    "version": "0.0.0",
+    "version": "0.0.1-0",
     "description": "Tinymce support component description",
     "sass": "main.scss",
     "main": "main.js",
