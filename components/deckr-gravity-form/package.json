@@ -1,6 +1,6 @@
 {
     "name": "deckr-gravity-form",
-    "version": "0.0.1-2",
+    "version": "0.0.1-3",
     "description": "Gravity form component description",
     "sass": "main.scss",
     "main": "main.js",

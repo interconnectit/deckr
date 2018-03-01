@@ -1,6 +1,6 @@
 {
     "name": "deckr-cta",
-    "version": "0.0.1-2",
+    "version": "0.0.1-3",
     "description": "Cta component description",
     "sass": "main.scss",
     "main": "main.js",
@@ -19,6 +19,6 @@
         "lint": "../../scripts/lint"
     },
     "dependencies": {
-        "deckr-support": "^0.0.1-1"
+        "deckr-support": "^0.0.1-2"
     }
 }

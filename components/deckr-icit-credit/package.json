@@ -1,6 +1,6 @@
 {
     "name": "deckr-icit-credit",
-    "version": "0.0.1-2",
+    "version": "0.0.1-3",
     "description": "ICIT Credit search component description",
     "sass": "main.scss",
     "main": "main.js",
