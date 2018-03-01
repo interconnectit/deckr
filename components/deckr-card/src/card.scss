@@ -16,9 +16,7 @@
 
 // Individual cards
 .sf-card {
-
     background-color: $card-background-color;
-
     margin-bottom: 24px;
     position: relative;
     flex: 100%;
@@ -26,6 +24,7 @@
     @include tablet {
         margin-bottom: 30px;
     }
+
     @include desktop {
         margin-right: $card-gap;
         margin-bottom: 30px;
@@ -36,7 +35,6 @@
         @include desktop {
             flex: 630 / 1320 * 100%;
         }
-
     }
 
     // 3 x card styling
@@ -44,7 +42,6 @@
         @include desktop {
             flex: 410 / 1320 * 100%;
         }
-
     }
 
     // 4 x card styling
@@ -55,19 +52,21 @@
     }
 
     // 6 x card styling - plus basis for the 5 x intro
-    .sf-cards--5 &, .sf-cards--6 & {
+    .sf-cards--5 &,
+    .sf-cards--6 & {
         @include mobile {
             flex: 47%;
             margin-right: $card-gap;
         }
+
         @include desktop {
             flex: 190 / 1290 * 100%;
             margin-right: $card-gap;
+
             &:nth-of-type(2n) {
                 margin-right: $card-gap;
             }
         }
-
     }
 
     //5 x intro
@@ -85,11 +84,11 @@
             border: none;
             background: none;
             flex: 100%;
+
             @include desktop {
                 flex: 190 / 1290 * 100%;
             }
         }
-
     }
 
     .sf-cards--sidebar &,
@@ -109,12 +108,12 @@
         max-width: none;
         width: 100%;
         object-fit: cover;
+
         @include desktop {
             height: 250px;
         }
 
         &-link--object-fit {
-
             background-size: cover;
             background-position: 50% 50%;
             display: block;
@@ -137,14 +136,11 @@
             }
 
             &-link--object-fit {
-
                 @include desktop {
                     height: 400px;
                     height: 50vh;
                 }
-
             }
-
         }
 
         .sf-cards--2 & {
@@ -153,11 +149,9 @@
             }
 
             &-link--object-fit {
-
                 @include desktop {
                     height: 300px;
                 }
-
             }
         }
 
@@ -167,11 +161,9 @@
             }
 
             &-link--object-fit {
-
                 @include desktop {
                     height: 200px;
                 }
-
             }
         }
 
@@ -181,31 +173,23 @@
             }
 
             &-link--object-fit {
-
                 @include desktop {
                     height: 180px;
                 }
-
             }
         }
 
         .sf-cards--sidebar & {
-
             @include desktop {
                 height: 200px;
             }
 
             &-link--object-fit {
-
                 @include desktop {
                     height: 200px;
                 }
-
             }
-
         }
-
-
     }
 
     &__categories {
@@ -223,6 +207,7 @@
 
     &__text {
         padding: 24px 24px 48px 24px;
+
         @include mobile {
             padding: 30px 30px 54px 30px;
         }
@@ -269,33 +254,32 @@
         .sf-card--intro & {
             padding: 0;
         }
-
     }
 
     &__title {
         font-weight: bold;
+        margin-bottom: 3px;
+
         @include fsz(21px);
         @include lh(21px);
-        margin-bottom: 3px;
-        @include desktop {
-
-        }
 
         .sf-cards--hero &,
         .sf-cards--1 & {
             @include tablet {
+                width: 490 / 1290 * 100%;
+                padding-left: 30px;
+
                 @include fsz(24px);
                 @include lh(27px);
-                padding-left: 30px;
-                width: 490 / 1290 * 100%;
             }
         }
 
         .sf-cards--2 & {
             @include tablet {
-                @include fsz(18px);
                 padding-left: 30px;
                 width: 190 / 630 * 100%;
+
+                @include fsz(18px);
             }
         }
 
@@ -305,36 +289,31 @@
             }
         }
 
-        .sf-cards--5 &, .sf-cards--6 & {
-            @include desktop {
-                @include fsz(18px);
-            }
-        }
-
-        .sf-cards--5 &, .sf-cards--6 & {
+        .sf-cards--5 &,
+        .sf-cards--6 & {
             @include desktop {
                 @include fsz(18px);
             }
         }
 
         .sf-cards--sidebar & {
-
             @include desktop {
                 @include fsz(18px);
                 @include lh(18px);
             }
-
         }
 
         &-link {
-            &:link, &:visited {
+            &:link,
+            &:visited {
                 color: $black;
             }
-            &:hover, &:active {
+
+            &:hover,
+            &:active {
                 color: $primary-color;
             }
         }
-
     }
 
     &__excerpt {
@@ -344,10 +323,11 @@
         .sf-cards--hero &,
         .sf-cards--1 & {
             @include tablet {
-                @include fsz(18px);
-                @include lh(27px);
                 padding-right: 30px;
                 width: 740 / 1290 * 100%;
+
+                @include fsz(18px);
+                @include lh(27px);
             }
         }
 
@@ -364,7 +344,8 @@
             }
         }
 
-        .sf-cards--5 &, .sf-cards--6 & {
+        .sf-cards--5 &,
+        .sf-cards--6 & {
             @include desktop {
                 @include fsz(14px);
                 @include lh(18px);
@@ -372,12 +353,10 @@
         }
 
         .sf-cards--sidebar & {
-
             @include desktop {
                 @include fsz(14px);
                 @include lh(18px);
             }
-
         }
     }
 
@@ -388,13 +367,16 @@
         padding: 6px 24px 6px 24px;
         position: absolute;
         width: 100%;
+
         @include mobile {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
             padding: 12px 30px 12px 30px;
         }
-        .sf-cards--5 &, .sf-cards--6 & {
+
+        .sf-cards--5 &,
+        .sf-cards--6 & {
             @include desktop {
                 padding-top: 6px;
                 padding-bottom: 6px;
@@ -403,40 +385,41 @@
     }
 
     .sf-author {
-
         margin-bottom: 3px;
         width: 60%;
 
-        .sf-cards--2 &, .sf-cards--3 &, .sf-cards--4 & {
+        .sf-cards--2 &,
+        .sf-cards--3 &,
+        .sf-cards--4 & {
             @include mobile {
                 margin-bottom: 0;
                 width: 60%;
             }
         }
 
-        .sf-cards--5 &, .sf-cards--6 & {
+        .sf-cards--5 &,
+        .sf-cards--6 & {
             margin-bottom: 3px;
             width: 100%;
         }
-
     }
 
     .sf-date {
-
         text-align: right;
         width: 40%;
 
-        .sf-cards--2 &, .sf-cards--3 &, .sf-cards--4 & {
+        .sf-cards--2 &,
+        .sf-cards--3 &,
+        .sf-cards--4 & {
             @include mobile {
                 text-align: right;
                 width: 40%;
             }
-
         }
 
-        .sf-cards--5 &, .sf-cards--6 & {
+        .sf-cards--5 &,
+        .sf-cards--6 & {
             width: 100%;
         }
-
     }
 }

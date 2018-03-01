@@ -11,7 +11,7 @@
 
     @include desktop {
         margin-bottom: 30px;
-        width: calc( 100% + #{$card-gap});
+        width: calc(100% + #{$card-gap});
     }
 
     .sf-content__sidebar &,
@@ -25,15 +25,16 @@
         line-height: 1;
         margin-bottom: 9px;
         width: 100%;
+
         @include tablet {
             font-size: 24px;
         }
+
         @include desktop {
             font-size: 30px;
             margin-bottom: 12px;
         }
     }
-
 }
 
 // Pagination links container
