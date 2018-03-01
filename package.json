@@ -2,10 +2,11 @@
     "private": true,
     "scripts": {
         "postinstall": "lerna bootstrap --hoist",
-        "start": "start-storybook -p 9001",
-        "publish": "build-storybook -o build && gh-pages -d build",
+        "storybook:start": "start-storybook -p 9001",
+        "storybook:publish": "build-storybook -o build && gh-pages -d build",
         "release": "lerna publish --skip-git",
-        "test": "stylelint --formatter verbose 'components/**/*.scss'"
+        "lint": "lerna run lint",
+        "test": "lerna run test"
     },
     "devDependencies": {
         "@storybook/addon-options": "3.3.14",
