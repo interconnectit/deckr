@@ -19,5 +19,8 @@
         "build": "../../scripts/build",
         "lint": "../../scripts/lint",
         "test": "../../scripts/npm-run-all lint build"
+    },
+    "dependencies": {
+        "deckr-support": "^0.0.1-4"
     }
 }

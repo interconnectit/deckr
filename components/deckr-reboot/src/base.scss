@@ -1,6 +1,8 @@
-// Reset the box sizing
 html {
     box-sizing: border-box;
+    font-size: $root-font-size;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 *,
@@ -9,32 +11,211 @@ html {
     box-sizing: inherit;
 }
 
-// Reset the body
+@at-root {
+    @-ms-viewport {
+        width: device-width;
+    }
+}
+
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    color: $base-text-color;
-    background-color: $base-background-color;
+    color: $black;
+    background: $light-grey;
 }
 
-// Reset fonts for relevant elements
-input,
-select,
-textarea,
-button {
-    font-family: inherit;
-    font-size: inherit;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: $headings-color;
+}
+
+h1,
+.h1 {
+    font-size: $h1-font-size;
+}
+
+h2,
+.h2 {
+    font-size: $h2-font-size;
+}
+
+h3,
+.h3 {
+    font-size: $h3-font-size;
+}
+
+h4,
+.h4 {
+    font-size: $h4-font-size;
+}
+
+h5,
+.h5 {
+    font-size: $h5-font-size;
+}
+
+h6,
+.h6 {
+    font-size: $h6-font-size;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
     line-height: inherit;
 }
 
-// Reset tables
-table {
-    border-spacing: 0;
-    border-collapse: collapse;
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
-td,
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+}
+
+blockquote {
+    margin: 0 0 1rem;
+}
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+    touch-action: manipulation;
+}
+
+a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+}
+
+pre {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+}
+
+figure {
+    margin: 0 0 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: transparent;
+}
+
+caption {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: $light-grey;
+    text-align: left;
+    caption-side: bottom;
+}
+
 th {
+    text-align: left;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+    line-height: inherit;
+}
+
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+    -webkit-appearance: listbox;
+}
+
+textarea {
+    resize: vertical;
+}
+
+fieldset {
+    min-width: 0;
     padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    line-height: inherit;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
 }
