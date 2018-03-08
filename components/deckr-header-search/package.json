@@ -1,6 +1,6 @@
 {
     "name": "deckr-header-search",
-    "version": "0.0.1-5",
+    "version": "1.0.0",
     "description": "Header search component description",
     "sass": "main.scss",
     "main": "main.js",
@@ -21,6 +21,6 @@
         "test": "../../scripts/npm-run-all lint build"
     },
     "dependencies": {
-        "deckr-support": "^0.0.1-4"
+        "deckr-support": "^1.0.0"
     }
 }
