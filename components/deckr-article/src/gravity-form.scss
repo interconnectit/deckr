@@ -55,6 +55,11 @@
     }
 }
 
+.gform_wrapper .gfield_checkbox li label,
+.gform_wrapper .gfield_radio li label {
+    padding: 4px 0 0 9px;
+}
+
 .gform_fields.top_label {
     .gfield_label {
         margin: 0;
@@ -113,11 +118,6 @@
     line-height: 1;
 
     @include fsz(16px);
-}
-
-.gform_wrapper .gfield_checkbox li label,
-.gform_wrapper .gfield_radio li label {
-    padding: 4px 0 0 9px;
 }
 
 .gform_confirmation_message {

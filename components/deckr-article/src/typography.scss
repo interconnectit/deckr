@@ -193,11 +193,12 @@ dl {
     }
 }
 
+/* stylelint-disable no-descending-specificity */
 ul {
     position: relative;
 
     li {
-        &:before {
+        &::before {
             background-color: $primary-color;
             border-radius: 99px;
             content: '';
@@ -217,11 +218,12 @@ ul {
             li {
                 &::before {
                     background: none;
-                    @include fsz(15px);
                     line-height: 1;
                     padding-left: 0;
                     padding-right: 0;
                     width: auto;
+
+                    @include fsz(15px);
                 }
 
                 ul {
@@ -288,9 +290,9 @@ ol {
                 }
             }
         }
-
     }
 }
+/* stylelint-enable */
 
 blockquote {
     background: #fff;
