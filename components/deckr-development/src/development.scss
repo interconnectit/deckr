@@ -1,4 +1,4 @@
-body.development:before {
+body.development::before {
     position: fixed;
     z-index: 100;
     top: 150px;
@@ -10,27 +10,27 @@ body.development:before {
 }
 
 @media (min-width: 30em) {
-    body.development:before {
+    body.development::before {
         top: 130px;
         content: "small \2265 480px (30em)";
     }
 }
 
 @media (min-width: 48em) {
-    body.development:before {
+    body.development::before {
         top: 216px;
         content: "medium \2265 768px (48em)";
     }
 }
 
 @media (min-width: 61.25em) {
-    body.development:before {
+    body.development::before {
         content: "large \2265 980px (61.25em)";
     }
 }
 
 @media (min-width: 80em) {
-    body.development:before {
+    body.development::before {
         content: "x-large \2265 1280px (80em)";
     }
 }
