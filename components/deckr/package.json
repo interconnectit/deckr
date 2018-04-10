@@ -31,7 +31,7 @@
         "deckr-copyright": "^1.0.1",
         "deckr-cta": "^1.0.1",
         "deckr-date": "^1.0.1",
-        "deckr-development": "1.0.0",
+        "deckr-development": "^1.0.2",
         "deckr-featured": "^1.0.1",
         "deckr-footer": "^1.0.1",
         "deckr-global-menu": "^1.0.1",
