@@ -1,6 +1,6 @@
 {
     "name": "deckr-category",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Category component description",
     "sass": "main.scss",
     "main": "main.js",
@@ -21,6 +21,6 @@
         "test": "../../scripts/npm-run-all lint build"
     },
     "dependencies": {
-        "deckr-support": "1.0.0"
+        "deckr-support": "^1.0.1"
     }
 }
