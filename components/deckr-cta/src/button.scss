@@ -1,36 +1,70 @@
-.sf-cta-button {
-    display: inline-block;
-    border-color: darken($cta-color, 5%);
-    background-color: $cta-color;
-    line-height: 1;
-    margin-top: 18px;
-    margin-bottom: 18px;
-    padding: 12px;
-    text-transform: uppercase;
-    font-family: $headings-font-family;
+.sf-cta {
+    &__button {
+        @include btn;
 
-    @include fsz(18px);
-    @include btn;
+        background-color: $cta-color;
+        border-color: $cta-color;
+        border-radius: 17px;
+        display: block;
+        line-height: 1;
+        margin: 18px auto;
+        padding: 12px 12px 24px 12px;
+        text-align: center;
+        text-transform: none;
+        width: 100%;
 
-    &:link,
-    &:visited {
-        color: #fff;
-    }
+        &:link,
+        &:visited {
+            color: $white;
+        }
 
-    &:hover,
-    &:active {
-        border-color: $primary-color;
-    }
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $cimmyt-grey;
 
-    &:active {
-        background-color: lighten($primary-color, 8%);
-    }
+            .sf-cta__title,
+            .sf-cta__text {
+                color: $cta-color;
+            }
+        }
 
-    @include tablet {
-        margin-top: 21px;
-        margin-bottom: 21px;
-        padding: 12px 24px;
+        &--title,
+        &--text {
+            margin: 0;
+        }
 
-        @include fsz(21px);
+        &--title {
+            color: $cimmyt-yellow;
+            font-weight: 700;
+
+            @include fsz(26px);
+            @include lh(54px);
+        }
+
+        &--text {
+            color: $white;
+            font-weight: 500;
+
+            @include fsz(21px);
+            @include lh(24px);
+        }
+
+        @include mobile {
+            width: 75%;
+        }
+
+        @include tablet {
+            margin-bottom: 21px;
+            margin-top: 21px;
+            padding: 12px 24px 24px;
+
+            @include fsz(21px);
+        }
+
+        @include desktop {
+            display: inline-block;
+            width: 100%;
+        }
     }
 }
