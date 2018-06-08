@@ -1,6 +1,6 @@
 {
     "name": "deckr",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "",
     "sass": "main.scss",
     "main": "main.js",
@@ -20,7 +20,7 @@
         "test": "../../scripts/npm-run-all lint build"
     },
     "dependencies": {
-        "deckr-article": "^1.0.1",
+        "deckr-article": "^1.0.2",
         "deckr-author": "^1.0.1",
         "deckr-card": "^1.0.1",
         "deckr-carousel": "^1.0.1",
