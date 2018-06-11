@@ -91,12 +91,12 @@ figure {
 
 figure,
 .wp-caption {
-    width: 100vw;
+    width: 100vw !important;
 
     @include mb(24px);
 
     @include tablet {
-        width: 100%;
+        width: 100% !important;
 
         @include mb(36px);
     }
@@ -107,14 +107,14 @@ figure,
 
     img {
         margin: 0;
-        width: 100%;
+        width: auto !important;
     }
 
     &.alignleft {
         @include desktop {
             float: left;
             margin-right: 90 / 850 * 100%;
-            width: 330 / 850 * 100%;
+            width: 330 / 850 * 100% !important;
         }
     }
 
@@ -122,7 +122,7 @@ figure,
         @include desktop {
             float: right;
             margin-left: 90 / 850 * 100%;
-            width: 330 / 850 * 100%;
+            width: 330 / 850 * 100% !important;
         }
     }
 }
