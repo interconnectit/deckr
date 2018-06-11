@@ -20,7 +20,7 @@
         "test": "../../scripts/npm-run-all lint build"
     },
     "dependencies": {
-        "deckr-article": "^1.0.2",
+        "deckr-article": "^1.0.3",
         "deckr-author": "^1.0.1",
         "deckr-card": "^1.0.1",
         "deckr-carousel": "^1.0.1",
